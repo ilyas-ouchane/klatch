@@ -1,0 +1,323 @@
+{% extends "layout.html" %}
+
+{%block body%}
+
+<div class="main-section">
+
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	<div class="container">
+	  <a class="navbar-brand" href="/">Klatch.</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="oi oi-menu"></span> Menu
+	  </button>
+	  <div class="collapse navbar-collapse" id="ftco-nav">
+		<ul class="navbar-nav ml-auto">
+	     <li class="nav-item"><a href="/login" class="nav-link icon d-flex align-items-center"> Login</a></li>
+		  <li class="nav-item cta"><a href="#" class="nav-link icon d-flex align-items-center"> Les chatrooms</a></li>
+		  <li class="nav-item"><a href="#" class="nav-link icon d-flex align-items-center"><i class="ion-logo-facebook"></i><span class="d-lg-none ml-2">Facebook</span></a></li>
+		  <li class="nav-item"><a href="#" class="nav-link icon d-flex align-items-center"><i class="ion-logo-twitter"></i><span class="d-lg-none ml-2">Twitter</span></a></li>
+		  <li class="nav-item"><a href="#" class="nav-link icon d-flex align-items-center"><i class="ion-logo-instagram"></i><span class="d-lg-none ml-2">Instagram</span></a></li>
+		</ul>
+	  </div>
+	  </div>
+  </nav>
+<!-- END nav -->
+
+  <section class="hero-wrap js-fullheight" style="background-image: url(static/images/bg_1.jpg);" data-stellar-background-ratio="0.5">
+	  <div class="overlay"></div>
+	  <div class="container">
+		  <div class="row description js-fullheight align-items-center justify-content-center">
+			  <div class="col-md-8 text-center">
+				  <div class="text">
+					  <h1 class="mb-4"><span>Klatch</span></h1>
+					  <h4 class="mb-5 mt-2">Chatroom avec recommendation chatbot.</h4>
+					  
+				  </div>
+			  </div>
+		  </div>
+	  </div>
+	  <div class="mouse">
+			<a href="#" class="mouse-icon rounded-circle bg-danger">
+				<div class="mouse-wheel"><span class="ion-ios-arrow-round-down text-light"></span></div>
+			</a>
+		</div>
+  </section>
+
+  <!-- - - - - -end- - - - -  -->
+
+  <form action="" method="POST">
+  <section class="ftco-section" id="inputs">
+		<div class="container">
+			<div class="row mb-5">
+				<div class="col-md-12">
+					<h2 class="heading-section">Creer votre profil</h2>
+				</div>
+            </div>
+            
+			<div class="row">
+				<div class="col-md-3">
+		<div class="form-group has-default">
+		  <input type="text" name="nom" class="form-control" placeholder="Nom">
+		</div>
+		<div class="form-group has-default">
+		  <input type="text" name="prenom" class="form-control" placeholder="Prenom">
+		</div>
+		
+	  </div>
+	  <div class="col-md-3">
+		<div class="form-group">
+				<input type="email" name="email" class="form-control" required>
+				<label class="form-control-placeholder" for="email">Email</label>
+			  </div>
+			  <div class="form-group">
+				<input type="password" name="password" class="form-control" required>
+				<label class="form-control-placeholder" for="password">Mot de passe</label>
+			  </div>
+
+	  </div>
+	 
+
+  <!-- <section class="ftco-section" id="checkRadios"> -->
+   
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<h2 class="heading-section mb-4">Musique</h2>
+					<div class="form-check">
+			<label class="custom-control fill-checkbox">
+							<input type="checkbox" class="fill-control-input">
+							<span class="fill-control-indicator"></span>
+							<span class="fill-control-description">Classical</span>
+						</label>
+		  </div>
+					<div class="form-check">
+						<label class="custom-control fill-checkbox">
+							<input type="checkbox" class="fill-control-input" checked>
+							<span class="fill-control-indicator"></span>
+							<span class="fill-control-description">Country</span>
+						</label>
+		</div>
+					<div class="form-check">
+									<label class="custom-control fill-checkbox">
+										<input type="checkbox" class="fill-control-input" checked>
+										<span class="fill-control-indicator"></span>
+										<span class="fill-control-description">Rap</span>
+									</label>
+					</div>
+					<div class="form-check">
+						<label class="custom-control fill-checkbox">
+							<input type="checkbox" class="fill-control-input" checked>
+							<span class="fill-control-indicator"></span>
+							<span class="fill-control-description">Jazz</span>
+						</label>
+		</div>
+					<div class="form-check">
+						<label class="custom-control fill-checkbox">
+							<input type="checkbox" class="fill-control-input" checked>
+							<span class="fill-control-indicator"></span>
+							<span class="fill-control-description">Rock</span>
+						</label>
+		</div>
+					<div class="form-check">
+						<label class="custom-control fill-checkbox">
+							<input type="checkbox" class="fill-control-input" checked>
+							<span class="fill-control-indicator"></span>
+							<span class="fill-control-description">Opera</span>
+						</label>
+		</div>
+					
+				</div>
+
+				<div class="col-md-4">
+					<h2 class="heading-section mb-4">Films</h2>
+					<div class="form-check">
+			<label class="custom-control fill-checkbox">
+							<input type="checkbox" class="fill-control-input">
+							<span class="fill-control-indicator"></span>
+							<span class="fill-control-description">Horreur</span>
+						</label>
+		  </div>
+					<div class="form-check">
+						<label class="custom-control fill-checkbox">
+							<input type="checkbox" class="fill-control-input" checked>
+							<span class="fill-control-indicator"></span>
+							<span class="fill-control-description">Thriller</span>
+						</label>
+		</div>
+					<div class="form-check">
+									<label class="custom-control fill-checkbox">
+										<input type="checkbox" class="fill-control-input" checked>
+										<span class="fill-control-indicator"></span>
+										<span class="fill-control-description">Comedie</span>
+									</label>
+					</div>
+					<div class="form-check">
+						<label class="custom-control fill-checkbox">
+							<input type="checkbox" class="fill-control-input" checked>
+							<span class="fill-control-indicator"></span>
+							<span class="fill-control-description">Romantique</span>
+						</label>
+		</div>
+					<div class="form-check">
+						<label class="custom-control fill-checkbox">
+							<input type="checkbox" class="fill-control-input" checked>
+							<span class="fill-control-indicator"></span>
+							<span class="fill-control-description">Sci-fiction</span>
+						</label>
+		</div>
+					<div class="form-check">
+						<label class="custom-control fill-checkbox">
+							<input type="checkbox" class="fill-control-input" checked>
+							<span class="fill-control-indicator"></span>
+							<span class="fill-control-description">Animations</span>
+						</label>
+		</div>
+					<div class="form-check">
+						<label class="custom-control fill-checkbox">
+							<input type="checkbox" class="fill-control-input" checked>
+							<span class="fill-control-indicator"></span>
+							<span class="fill-control-description">Documentaire</span>
+						</label>
+		</div>
+					<div class="form-check">
+						<label class="custom-control fill-checkbox">
+							<input type="checkbox" class="fill-control-input" checked>
+							<span class="fill-control-indicator"></span>
+							<span class="fill-control-description">Action</span>
+						</label>
+		</div>
+					<div class="form-check">
+						<label class="custom-control fill-checkbox">
+							<input type="checkbox" class="fill-control-input" checked>
+							<span class="fill-control-indicator"></span>
+							<span class="fill-control-description">Western</span>
+						</label>
+		</div>
+					<div class="form-check">
+						<label class="custom-control fill-checkbox">
+							<input type="checkbox" class="fill-control-input" checked>
+							<span class="fill-control-indicator"></span>
+							<span class="fill-control-description">Historiques</span>
+						</label>
+		</div>	
+				</div>
+
+				<div class="col-md-4">
+					<h2 class="heading-section mb-4">Autre preferences</h2>
+					<div class="form-check">
+			<label class="custom-control fill-checkbox">
+							<input type="checkbox" class="fill-control-input">
+							<span class="fill-control-indicator"></span>
+							<span class="fill-control-description">Sport</span>
+						</label>
+		  </div>
+					<div class="form-check">
+						<label class="custom-control fill-checkbox">
+							<input type="checkbox" class="fill-control-input" checked>
+							<span class="fill-control-indicator"></span>
+							<span class="fill-control-description">Science</span>
+						</label>
+		</div>
+					
+					<div class="form-check">
+						<label class="custom-control fill-checkbox">
+							<input type="checkbox" class="fill-control-input" checked>
+							<span class="fill-control-indicator"></span>
+							<span class="fill-control-description">Politique</span>
+						</label>
+		</div>
+					<div class="form-check">
+						<label class="custom-control fill-checkbox">
+							<input type="checkbox" class="fill-control-input" checked>
+							<span class="fill-control-indicator"></span>
+							<span class="fill-control-description">Education</span>
+						</label>
+		</div>
+					<div class="form-check">
+						<label class="custom-control fill-checkbox">
+							<input type="checkbox" class="fill-control-input" checked>
+							<span class="fill-control-indicator"></span>
+							<span class="fill-control-description">Culture</span>
+						</label>
+		</div>
+					<div class="form-check">
+						<label class="custom-control fill-checkbox">
+							<input type="checkbox" class="fill-control-input" checked>
+							<span class="fill-control-indicator"></span>
+							<span class="fill-control-description">Mode</span>
+						</label>
+		</div>
+					<div class="form-check">
+						<label class="custom-control fill-checkbox">
+							<input type="checkbox" class="fill-control-input" checked>
+							<span class="fill-control-indicator"></span>
+							<span class="fill-control-description">Charite</span>
+						</label>
+		</div>
+					<div class="form-check">
+						<label class="custom-control fill-checkbox">
+							<input type="checkbox" class="fill-control-input" checked>
+							<span class="fill-control-indicator"></span>
+							<span class="fill-control-description">Theatre</span>
+						</label>
+		</div>
+					<div class="form-check">
+						<label class="custom-control fill-checkbox">
+							<input type="checkbox" class="fill-control-input" checked>
+							<span class="fill-control-indicator"></span>
+							<span class="fill-control-description">Voitures</span>
+						</label>
+		</div>	
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+			  <div class="text-center">
+				<button class="btn btn-primary" type="submit" id="singlebutton"> Valider</button>
+			  </div>
+			</div>
+		  </div> 
+		</form>
+  </section> 
+
+  
+
+  <!-- - - - - -end- - - - -  -->
+	
+
+  <footer class="ftco-section ftco-section-2">
+	  <div class="col-md-12 text-center">
+	  <p class="mb-0">
+		<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+		 Merci d'avoir utilise Klatch <i class="icon-heart" aria-hidden="true"></i> 
+		<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	  </p>
+	</div>
+  </footer>
+
+</div>
+
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/jquery-migrate-3.0.1.min.js"></script>
+<script src="static/js/popper.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/jquery.easing.1.3.js"></script>
+<script src="static/js/jquery.waypoints.min.js"></script>
+<script src="static/js/jquery.stellar.min.js"></script>
+<script src="static/js/owl.carousel.min.js"></script>
+<script src="static/js/jquery.magnific-popup.min.js"></script>
+<script src="static/js/aos.js"></script>
+
+<script src="static/js/nouislider.min.js"></script>
+<script src="static/js/moment-with-locales.min.js"></script>
+<script src="static/js/bootstrap-datetimepicker.min.js"></script>
+<script src="static/js/main.js"></script>
+
+
+
+{%endblock%}
