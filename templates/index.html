@@ -62,6 +62,9 @@
 		<div class="form-group has-default">
 		  <input type="text" name="prenom" class="form-control" placeholder="Prenom">
 		</div>
+		<div class="form-group has-default">
+			<input type="text" name="age" class="form-control" placeholder="Age">
+		  </div>
 		
 	  </div>
 	  <div class="col-md-3">
@@ -81,194 +84,305 @@
    
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4">
-					<h2 class="heading-section mb-4">Musique</h2>
-					<div class="form-check">
-			<label class="custom-control fill-checkbox">
-							<input type="checkbox" class="fill-control-input">
-							<span class="fill-control-indicator"></span>
-							<span class="fill-control-description">Classical</span>
-						</label>
-		  </div>
-					<div class="form-check">
-						<label class="custom-control fill-checkbox">
-							<input type="checkbox" class="fill-control-input" checked>
-							<span class="fill-control-indicator"></span>
-							<span class="fill-control-description">Country</span>
-						</label>
-		</div>
-					<div class="form-check">
-									<label class="custom-control fill-checkbox">
-										<input type="checkbox" class="fill-control-input" checked>
-										<span class="fill-control-indicator"></span>
-										<span class="fill-control-description">Rap</span>
-									</label>
-					</div>
-					<div class="form-check">
-						<label class="custom-control fill-checkbox">
-							<input type="checkbox" class="fill-control-input" checked>
-							<span class="fill-control-indicator"></span>
-							<span class="fill-control-description">Jazz</span>
-						</label>
-		</div>
-					<div class="form-check">
-						<label class="custom-control fill-checkbox">
-							<input type="checkbox" class="fill-control-input" checked>
-							<span class="fill-control-indicator"></span>
-							<span class="fill-control-description">Rock</span>
-						</label>
-		</div>
-					<div class="form-check">
-						<label class="custom-control fill-checkbox">
-							<input type="checkbox" class="fill-control-input" checked>
-							<span class="fill-control-indicator"></span>
-							<span class="fill-control-description">Opera</span>
-						</label>
-		</div>
-					
-				</div>
+				<div class="form-group">
+					<label for="musicG">How often do you listen to music in general?</label>
+					<select multiple class="form-control" name="musicG">
+					  <option value="1">All the time</option>
+					  <option value="2">Sometimes</option>
+					  <option value="3">Occasionnaly</option>
+					  <option value="4">Hardly ever</option>
+					  <option value="5">Never</option>
+					</select>
+				  </div>
+				  <div class="mt-2 col-md-12"></div>
+				  <div class="form-group">
+					<label for="exampleFormControlSelect2">How much do you like Hiphop?</label>
+					<select multiple class="form-control" name="hiphop">
+					  <option value="1">A lot</option>
+					  <option value="2">A bit</option>
+					  <option value="3">I don't like it that much</option>
+					  <option value="4">I just don't</option>
+					  <option value="5">Hate it!</option>
+					</select>
+				  </div>
 
-				<div class="col-md-4">
-					<h2 class="heading-section mb-4">Films</h2>
-					<div class="form-check">
-			<label class="custom-control fill-checkbox">
-							<input type="checkbox" class="fill-control-input">
-							<span class="fill-control-indicator"></span>
-							<span class="fill-control-description">Horreur</span>
-						</label>
-		  </div>
-					<div class="form-check">
-						<label class="custom-control fill-checkbox">
-							<input type="checkbox" class="fill-control-input" checked>
-							<span class="fill-control-indicator"></span>
-							<span class="fill-control-description">Thriller</span>
-						</label>
-		</div>
-					<div class="form-check">
-									<label class="custom-control fill-checkbox">
-										<input type="checkbox" class="fill-control-input" checked>
-										<span class="fill-control-indicator"></span>
-										<span class="fill-control-description">Comedie</span>
-									</label>
-					</div>
-					<div class="form-check">
-						<label class="custom-control fill-checkbox">
-							<input type="checkbox" class="fill-control-input" checked>
-							<span class="fill-control-indicator"></span>
-							<span class="fill-control-description">Romantique</span>
-						</label>
-		</div>
-					<div class="form-check">
-						<label class="custom-control fill-checkbox">
-							<input type="checkbox" class="fill-control-input" checked>
-							<span class="fill-control-indicator"></span>
-							<span class="fill-control-description">Sci-fiction</span>
-						</label>
-		</div>
-					<div class="form-check">
-						<label class="custom-control fill-checkbox">
-							<input type="checkbox" class="fill-control-input" checked>
-							<span class="fill-control-indicator"></span>
-							<span class="fill-control-description">Animations</span>
-						</label>
-		</div>
-					<div class="form-check">
-						<label class="custom-control fill-checkbox">
-							<input type="checkbox" class="fill-control-input" checked>
-							<span class="fill-control-indicator"></span>
-							<span class="fill-control-description">Documentaire</span>
-						</label>
-		</div>
-					<div class="form-check">
-						<label class="custom-control fill-checkbox">
-							<input type="checkbox" class="fill-control-input" checked>
-							<span class="fill-control-indicator"></span>
-							<span class="fill-control-description">Action</span>
-						</label>
-		</div>
-					<div class="form-check">
-						<label class="custom-control fill-checkbox">
-							<input type="checkbox" class="fill-control-input" checked>
-							<span class="fill-control-indicator"></span>
-							<span class="fill-control-description">Western</span>
-						</label>
-		</div>
-					<div class="form-check">
-						<label class="custom-control fill-checkbox">
-							<input type="checkbox" class="fill-control-input" checked>
-							<span class="fill-control-indicator"></span>
-							<span class="fill-control-description">Historiques</span>
-						</label>
-		</div>	
-				</div>
+				  <div class="mt-2 col-md-12"></div>
+				  <div class="form-group">
+					<label for="exampleFormControlSelect2">How much do you like Rap?</label>
+					<select multiple class="form-control" name="rap">
+						<option value="1">A lot</option>
+						<option value="2">A bit</option>
+						<option value="3">I don't like it that much</option>
+						<option value="4">I just don't</option>
+						<option value="5">Hate it!</option>
+					</select>
+				  </div>
 
-				<div class="col-md-4">
-					<h2 class="heading-section mb-4">Autre preferences</h2>
-					<div class="form-check">
-			<label class="custom-control fill-checkbox">
-							<input type="checkbox" class="fill-control-input">
-							<span class="fill-control-indicator"></span>
-							<span class="fill-control-description">Sport</span>
-						</label>
-		  </div>
-					<div class="form-check">
-						<label class="custom-control fill-checkbox">
-							<input type="checkbox" class="fill-control-input" checked>
-							<span class="fill-control-indicator"></span>
-							<span class="fill-control-description">Science</span>
-						</label>
-		</div>
-					
-					<div class="form-check">
-						<label class="custom-control fill-checkbox">
-							<input type="checkbox" class="fill-control-input" checked>
-							<span class="fill-control-indicator"></span>
-							<span class="fill-control-description">Politique</span>
-						</label>
-		</div>
-					<div class="form-check">
-						<label class="custom-control fill-checkbox">
-							<input type="checkbox" class="fill-control-input" checked>
-							<span class="fill-control-indicator"></span>
-							<span class="fill-control-description">Education</span>
-						</label>
-		</div>
-					<div class="form-check">
-						<label class="custom-control fill-checkbox">
-							<input type="checkbox" class="fill-control-input" checked>
-							<span class="fill-control-indicator"></span>
-							<span class="fill-control-description">Culture</span>
-						</label>
-		</div>
-					<div class="form-check">
-						<label class="custom-control fill-checkbox">
-							<input type="checkbox" class="fill-control-input" checked>
-							<span class="fill-control-indicator"></span>
-							<span class="fill-control-description">Mode</span>
-						</label>
-		</div>
-					<div class="form-check">
-						<label class="custom-control fill-checkbox">
-							<input type="checkbox" class="fill-control-input" checked>
-							<span class="fill-control-indicator"></span>
-							<span class="fill-control-description">Charite</span>
-						</label>
-		</div>
-					<div class="form-check">
-						<label class="custom-control fill-checkbox">
-							<input type="checkbox" class="fill-control-input" checked>
-							<span class="fill-control-indicator"></span>
-							<span class="fill-control-description">Theatre</span>
-						</label>
-		</div>
-					<div class="form-check">
-						<label class="custom-control fill-checkbox">
-							<input type="checkbox" class="fill-control-input" checked>
-							<span class="fill-control-indicator"></span>
-							<span class="fill-control-description">Voitures</span>
-						</label>
-		</div>	
-				</div>
+				  <div class="mt-2 col-md-12"></div>
+				  <div class="form-group">
+					<label for="raggae">How much do you like Raggae music?</label>
+					<select multiple class="form-control" name="raggae">
+						<option value="1">A lot</option>
+					  <option value="2">A bit</option>
+					  <option value="3">I don't like it that much</option>
+					  <option value="4">I just don't</option>
+					  <option value="5">Hate it!</option>
+					</select>
+				  </div>
+
+				  <div class="mt-2 col-md-12"></div>
+				  <div class="form-group">
+					<label for="exampleFormControlSelect2">How much do you like Swing music?</label>
+					<select multiple class="form-control" name="swing">
+						<option value="1">A lot</option>
+						<option value="2">A bit</option>
+						<option value="3">I don't like it that much</option>
+						<option value="4">I just don't</option>
+						<option value="5">Hate it!</option>
+					</select>
+				  </div>
+
+				  <div class="mt-2 col-md-12"></div>
+				  <div class="form-group">
+					<label for="exampleFormControlSelect2">How much do you like Jazz?</label>
+					<select multiple class="form-control" name="jazz">
+						<option value="1">A lot</option>
+						<option value="2">A bit</option>
+						<option value="3">I don't like it that much</option>
+						<option value="4">I just don't</option>
+						<option value="5">Hate it!</option>
+					</select>
+				  </div>
+
+				  <div class="mt-2 col-md-12"></div>
+				  <div class="form-group">
+					<label for="exampleFormControlSelect2">How much do you like Movies in general??</label>
+					<select multiple class="form-control" name="moviesG">
+						<option value="1">A lot</option>
+						<option value="2">A bit</option>
+						<option value="3">I don't like it that much</option>
+						<option value="4">I just don't</option>
+						<option value="5">Hate it!</option>
+					</select>
+				  </div>
+
+				  <div class="mt-2 col-md-12"></div>
+				  <div class="form-group">
+					<label for="exampleFormControlSelect2">How much do you like Comedy movies?</label>
+					<select multiple class="form-control" name="comedy">
+						<option value="1">A lot</option>
+						<option value="2">A bit</option>
+						<option value="3">I don't like it that much</option>
+						<option value="4">I just don't</option>
+						<option value="5">Hate it!</option>
+					</select>
+				  </div>
+
+				  <div class="mt-2 col-md-12"></div>
+				  <div class="form-group">
+					<label for="exampleFormControlSelect2">How much do you like romantic movies?</label>
+					<select multiple class="form-control" name="romantic">
+						<option value="1">A lot</option>
+						<option value="2">A bit</option>
+						<option value="3">I don't like it that much</option>
+						<option value="4">I just don't</option>
+						<option value="5">Hate it!</option>
+					</select>
+				  </div>
+
+				  <div class="mt-2 col-md-12"></div>
+				  <div class="form-group">
+					<label for="exampleFormControlSelect2">How much do you like sci-fiction movies?</label>
+					<select multiple class="form-control" name="scif">
+						<option value="1">A lot</option>
+						<option value="2">A bit</option>
+						<option value="3">I don't like it that much</option>
+						<option value="4">I just don't</option>
+						<option value="5">Hate it!</option>
+					</select>
+				  </div>
+
+				  <div class="mt-2 col-md-12"></div>
+				  <div class="form-group">
+					<label for="exampleFormControlSelect2">How much do you like war movies?</label>
+					<select multiple class="form-control" name="war">
+						<option value="1">A lot</option>
+						<option value="2">A bit</option>
+						<option value="3">I don't like it that much</option>
+						<option value="4">I just don't</option>
+						<option value="5">Hate it!</option>
+					</select>
+				  </div>
+
+				  <div class="mt-2 col-md-12"></div>
+				  <div class="form-group">
+					<label for="exampleFormControlSelect2">How much do you like fantasy movies?</label>
+					<select multiple class="form-control" name="fantasy">
+						<option value="1">A lot</option>
+						<option value="2">A bit</option>
+						<option value="3">I don't like it that much</option>
+						<option value="4">I just don't</option>
+						<option value="5">Hate it!</option>
+					</select>
+				  </div>
+
+				  <div class="mt-2 col-md-12"></div>
+				  <div class="form-group">
+					<label for="exampleFormControlSelect2">How much do you like documentaries?</label>
+					<select multiple class="form-control" name="documentaries">
+						<option value="1">A lot</option>
+						<option value="2">A bit</option>
+						<option value="3">I don't like it that much</option>
+						<option value="4">I just don't</option>
+						<option value="5">Hate it!</option>
+					</select>
+				  </div>
+
+				  <div class="mt-2 col-md-12"></div>
+				  <div class="form-group">
+					<label for="exampleFormControlSelect2">How much do you like western movies?</label>
+					<select multiple class="form-control" name="western">
+						<option value="1">A lot</option>
+						<option value="2">A bit</option>
+						<option value="3">I don't like it that much</option>
+						<option value="4">I just don't</option>
+						<option value="5">Hate it!</option>
+					</select>
+				  </div>
+
+				  <div class="mt-2 col-md-12"></div>
+				  <div class="form-group">
+					<label for="exampleFormControlSelect2">How much do you like history movies?</label>
+					<select multiple class="form-control" name="history">
+						<option value="1">A lot</option>
+						<option value="2">A bit</option>
+						<option value="3">I don't like it that much</option>
+						<option value="4">I just don't</option>
+						<option value="5">Hate it!</option>
+					</select>
+				  </div>
+
+				  <div class="mt-2 col-md-12"></div>
+				  <div class="form-group">
+					<label for="exampleFormControlSelect2">How much do you like psychology?</label>
+					<select multiple class="form-control" name="psychology">
+						<option value="1">A lot</option>
+						<option value="2">A bit</option>
+						<option value="3">I don't like it that much</option>
+						<option value="4">I just don't</option>
+						<option value="5">Hate it!</option>
+					</select>
+				  </div>
+
+				  <div class="mt-2 col-md-12"></div>
+				  <div class="form-group">
+					<label for="exampleFormControlSelect2">How much do you like politics?</label>
+					<select multiple class="form-control" name="politics">
+						<option value="1">A lot</option>
+						<option value="2">A bit</option>
+						<option value="3">I don't like it that much</option>
+						<option value="4">I just don't</option>
+						<option value="5">Hate it!</option>
+					</select>
+				  </div>
+
+				  <div class="mt-2 col-md-12"></div>
+				  <div class="form-group">
+					<label for="exampleFormControlSelect2">How much do you like reading?</label>
+					<select multiple class="form-control" name="reading">
+						<option value="1">A lot</option>
+						<option value="2">A bit</option>
+						<option value="3">I don't like it that much</option>
+						<option value="4">I just don't</option>
+						<option value="5">Hate it!</option>
+					</select>
+				  </div>
+
+				  <div class="mt-2 col-md-12"></div>
+				  <div class="form-group">
+					<label for="exampleFormControlSelect2">How much do you like languages?</label>
+					<select multiple class="form-control" name="languages">
+						<option value="1">A lot</option>
+						<option value="2">A bit</option>
+						<option value="3">I don't like it that much</option>
+						<option value="4">I just don't</option>
+						<option value="5">Hate it!</option>
+					</select>
+				  </div>
+
+				  <div class="mt-2 col-md-12"></div>
+				  <div class="form-group">
+					<label for="exampleFormControlSelect2">How much do you like musical instruments?</label>
+					<select multiple class="form-control" name="instruments">
+						<option value="1">A lot</option>
+						<option value="2">A bit</option>
+						<option value="3">I don't like it that much</option>
+						<option value="4">I just don't</option>
+						<option value="5">Hate it!</option>
+					</select>
+				  </div>
+
+				  <div class="mt-2 col-md-12"></div>
+				  <div class="form-group">
+					<label for="exampleFormControlSelect2">How much do you like writing?</label>
+					<select multiple class="form-control" name="writing">
+						<option value="1">A lot</option>
+						<option value="2">A bit</option>
+						<option value="3">I don't like it that much</option>
+						<option value="4">I just don't</option>
+						<option value="5">Hate it!</option>
+					</select>
+				  </div>
+
+				  <div class="mt-2 col-md-12"></div>
+				  <div class="form-group">
+					<label for="exampleFormControlSelect2">How much do you like sports?</label>
+					<select multiple class="form-control" name="sports">
+						<option value="1">A lot</option>
+						<option value="2">A bit</option>
+						<option value="3">I don't like it that much</option>
+						<option value="4">I just don't</option>
+						<option value="5">Hate it!</option>
+					</select>
+				  </div>
+
+				  <div class="mt-2 col-md-12"></div>
+				  <div class="form-group">
+					<label for="exampleFormControlSelect2">How much do you like celebrities?</label>
+					<select multiple class="form-control" name="celebrities">
+						<option value="1">A lot</option>
+						<option value="2">A bit</option>
+						<option value="3">I don't like it that much</option>
+						<option value="4">I just don't</option>
+						<option value="5">Hate it!</option>
+					</select>
+				  </div>
+
+				  <div class="mt-2 col-md-12"></div>
+				  <div class="form-group">
+					<label for="exampleFormControlSelect2">How much do you like science and technology?</label>
+					<select multiple class="form-control" name="technology">
+						<option value="1">A lot</option>
+						<option value="2">A bit</option>
+						<option value="3">I don't like it that much</option>
+						<option value="4">I just don't</option>
+						<option value="5">Hate it!</option>
+					</select>
+				  </div>
+
+				  <div class="mt-2 col-md-12"></div>
+				  <div class="form-group">
+					<label for="exampleFormControlSelect2">How much do you like theater?</label>
+					<select multiple class="form-control" name="theater">
+						<option value="1">A lot</option>
+						<option value="2">A bit</option>
+						<option value="3">I don't like it that much</option>
+						<option value="4">I just don't</option>
+						<option value="5">Hate it!</option>
+					</select>
+				  </div>
+
+
 			</div>
 		</div>
 		<div class="row">
