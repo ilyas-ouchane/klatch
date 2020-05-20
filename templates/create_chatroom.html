@@ -1,0 +1,517 @@
+{% extends "layout.html" %}
+
+{%block body%}
+
+<div class="main-section">
+
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	<div class="container">
+	  <a class="navbar-brand" href="/">Klatch.</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="oi oi-menu"></span> Menu
+	  </button>
+	  <div class="collapse navbar-collapse" id="ftco-nav">
+		<ul class="navbar-nav ml-auto">
+		<li class="nav-item"><a href="/profile" class="nav-link icon d-flex align-items-center"> Profile</a></li>
+	     <li class="nav-item"><a href="/login" class="nav-link icon d-flex align-items-center"> Login</a></li>
+		  <li class="nav-item cta"><a href="/index" class="nav-link icon d-flex align-items-center"> Les chatrooms</a></li>
+		  <li class="nav-item"><a href="#" class="nav-link icon d-flex align-items-center"><i class="ion-logo-facebook"></i><span class="d-lg-none ml-2">Facebook</span></a></li>
+		  <li class="nav-item"><a href="#" class="nav-link icon d-flex align-items-center"><i class="ion-logo-twitter"></i><span class="d-lg-none ml-2">Twitter</span></a></li>
+		  <li class="nav-item"><a href="#" class="nav-link icon d-flex align-items-center"><i class="ion-logo-instagram"></i><span class="d-lg-none ml-2">Instagram</span></a></li>
+		</ul>
+	  </div>
+	  </div>
+  </nav>
+<!-- END nav -->
+
+  <section class="hero-wrap js-fullheight" style="background-image: url(static/images/bg_1.jpg);" data-stellar-background-ratio="0.5">
+	  <div class="overlay"></div>
+	  <div class="container">
+		  <div class="row description js-fullheight align-items-center justify-content-center">
+			  <div class="col-md-8 text-center">
+				  <div class="text">
+					  <h1 class="mb-4"><span>Klatch</span></h1>
+					  <h4 class="mb-5 mt-2">Chatroom avec recommendation chatbot.</h4>
+					  
+				  </div>
+			  </div>
+		  </div>
+	  </div>
+	  <div class="mouse">
+			<a href="#" class="mouse-icon rounded-circle bg-danger">
+				<div class="mouse-wheel"><span class="ion-ios-arrow-round-down text-light"></span></div>
+			</a>
+		</div>
+  </section>
+
+  <!-- - - - - -end- - - - -  -->
+  <section class="ftco-section" id="inputs">
+  <form action="" method="POST">
+		<div class="container">
+			<div class="row mb-5">
+				<div class="col-md-12">
+					<h2 class="heading-section">Créer votre Chatroom</h2>
+				</div>
+            </div>
+			<div class="col-md-3">
+                <div class="form-group has-default">
+                    <input type="text" name="nomcr" class="form-control" placeholder="Nom du chatroom">
+                </div>
+                <div class="form-group has-default">
+                    <input type="textarea" name="descr" class="form-control" placeholder="Description">
+                </div>
+            </div>
+        </div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 text-center">
+					<h2 class="heading-section mb-4">
+						<small>Music</small>
+					</h2>
+					<div class="image-wrap">
+						<img src="static/images/music.jpg" alt="Round Image" class="rounded img-fluid image image-2" />
+					</div>
+					<div class="form-group">
+						<label for="musicG">Music</label>
+						<select multiple class="form-control" name="musicG">
+                            <option selected="selected" value="no">No</option>
+                            <option value="yes">Yes</option>
+						</select>
+					  </div>
+				</div>
+					<div class="col-md-4 text-center">
+						<h2 class="heading-section mb-4">
+							<small>HipHop</small>
+						</h2>
+						<div class="image-wrap">
+							<img src="static/images/hiphop.jpg" alt="Round Image" class="rounded img-fluid image image-2" />
+						</div>
+						<div class="mt-2 col-md-12"></div>
+						  <div class="form-group">
+							<label for="exampleFormControlSelect2">Hiphop</label>
+							<select multiple class="form-control" name="hiphop">
+                                <option selected="selected" value="no">No</option>
+                                <option value="yes">Yes</option>
+							</select>
+						  </div>
+					</div>
+					<div class="col-md-4 text-center">
+						<h2 class="heading-section mb-4">
+							<small>Rap</small>
+						</h2>
+						<div class="image-wrap">
+							<img src="static/images/rap.jpg" alt="Round Image" class="rounded img-fluid image image-2" />
+						</div>
+						<div class="mt-2 col-md-12"></div>
+						  <div class="form-group">
+							<label for="exampleFormControlSelect2">Rap</label>
+							<select multiple class="form-control" name="rap">
+								<option selected="selected" value="no">No</option>
+									<option value="yes">Yes</option>
+							</select>
+						  </div>
+					</div>
+					<div class="col-md-4 text-center">
+						<h2 class="heading-section mb-4">
+							<small>Reggae</small>
+						</h2>
+						<div class="image-wrap">
+							<label for="myCheckbox4"><img src="static/images/reggae.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+						</div>
+						<div class="mt-2 col-md-12"></div>
+						  <div class="form-group">
+							<label for="raggae">Raggae music</label>
+							<select multiple class="form-control" name="raggae">
+								<option selected="selected" value="no">No</option>
+								<option value="yes">Yes</option>
+							</select>
+						  </div>
+					</div>
+					<div class="col-md-4 text-center">
+						<h2 class="heading-section mb-4">
+							<small>Swing</small>
+						</h2>
+						<div class="image-wrap">
+							<label for="myCheckbox5"><img src="static/images/swing.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+						</div>
+						<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">Swing music</label>
+								<select multiple class="form-control" name="swing">
+									<option selected="selected" value="no">No</option>
+									<option value="yes">Yes</option>
+								</select>
+							  </div>
+					</div>
+					<div class="col-md-4 text-center">
+						<h2 class="heading-section mb-4">
+							<small>Jazz</small>
+						</h2>
+						<div class="image-wrap">
+							<label for="myCheckbox6"><img src="static/images/jazz.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+						</div>
+						<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">Jazz</label>
+								<select multiple class="form-control" name="jazz">
+									<option selected="selected" value="no">No</option>
+									<option value="yes">Yes</option>
+								</select>
+							  </div>
+					</div>
+					<div class="col-md-4 text-center">
+						<h2 class="heading-section mb-4">
+							<small>Movies</small>
+						</h2>
+						<div class="image-wrap">
+							<label for="myCheckbox7"><img src="static/images/movies.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+						</div>
+						<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">Movies in general</label>
+								<select multiple class="form-control" name="moviesG">
+									<option selected="selected" value="no">No</option>
+									<option value="yes">Yes</option>
+								</select>
+							  </div>
+					</div>
+						<div class="col-md-4 text-center">
+							<h2 class="heading-section mb-4">
+								<small>Comedy</small>
+							</h2>
+							<div class="image-wrap">
+								<label for="myCheckbox8"><img src="static/images/comedy.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+							</div>
+							<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">Comedy movies</label>
+								<select multiple class="form-control" name="comedy">
+									<option selected="selected" value="no">No</option>
+									<option value="yes">Yes</option>
+								</select>
+							  </div>
+						</div>
+						<div class="col-md-4 text-center">
+							<h2 class="heading-section mb-4">
+								<small>Romantic</small>
+							</h2>
+							<div class="image-wrap">
+								<label for="myCheckbox9"><img src="static/images/romantic.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+							</div>
+							<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">Romantic movies</label>
+								<select multiple class="form-control" name="romantic">
+									<option selected="selected" value="no">No</option>
+									<option value="yes">Yes</option>
+								</select>
+							  </div>
+						</div>
+						<div class="col-md-4 text-center">
+							<h2 class="heading-section mb-4">
+								<small>Sci-fi</small>
+							</h2>
+							<div class="image-wrap">
+								<label for="myCheckbox10"><img src="static/images/scifi.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+							</div>
+							<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">Sci-fiction movies</label>
+								<select multiple class="form-control" name="scif">
+									<option selected="selected" value="no">No</option>
+									<option value="yes">Yes</option>
+								</select>
+							  </div>
+						</div>
+						<div class="col-md-4 text-center">
+							<h2 class="heading-section mb-4">
+								<small>War</small>
+							</h2>
+							<div class="image-wrap">
+								<label for="myCheckbox11"><img src="static/images/war.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+							</div>
+							<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">War movies</label>
+								<select multiple class="form-control" name="war">
+									<option selected="selected" value="no">No</option>
+									<option value="yes">Yes</option>
+								</select>
+							  </div>
+						</div>
+						<div class="col-md-4 text-center">
+							<h2 class="heading-section mb-4">
+								<small>Fantazy/Fairy tales</small>
+							</h2>
+							<div class="image-wrap">
+								<label for="myCheckbox12"><img src="static/images/fanatazy.png" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+							</div>
+							<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">Fantasy movies</label>
+								<select multiple class="form-control" name="fantasy">
+									<option selected="selected" value="no">No</option>
+									<option value="yes">Yes</option>
+								</select>
+							  </div>
+						</div>
+						<div class="col-md-4 text-center">
+							<h2 class="heading-section mb-4">
+								<small>Documentary</small>
+							</h2>
+							<div class="image-wrap">
+								<label for="myCheckbox13"><img src="static/images/documentary.png" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+							</div>
+							<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">Documentaries</label>
+								<select multiple class="form-control" name="documentaries">
+									<option selected="selected" value="no">No</option>
+									<option value="yes">Yes</option>
+								</select>
+							  </div>
+						</div>
+						<div class="col-md-4 text-center">
+							<h2 class="heading-section mb-4">
+								<small>Western</small>
+							</h2>
+							<div class="image-wrap">
+								<label for="myCheckbox14"><img src="static/images/western.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+							</div>
+							<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">Western movies</label>
+								<select multiple class="form-control" name="western">
+									<option selected="selected" value="no">No</option>
+									<option value="yes">Yes</option>
+								</select>
+							  </div>
+						</div> 
+						<div class="col-md-4 text-center">
+							<h2 class="heading-section mb-4">
+								<small>History</small>
+							</h2>
+							<div class="image-wrap">
+								<label for="myCheckbox15"><img src="static/images/history.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+							</div>
+							<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">History movies</label>
+								<select multiple class="form-control" name="history">
+									<option selected="selected" value="no">No</option>
+									<option value="yes">Yes</option>
+								</select>
+							  </div>
+						</div> 
+						<div class="col-md-4 text-center">
+							<h2 class="heading-section mb-4">
+								<small>Psychology</small>
+							</h2>
+							<div class="image-wrap">
+								<label for="myCheckbox16"><img src="static/images/psychology.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+							</div>
+							<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">Psychology</label>
+								<select multiple class="form-control" name="psychology">
+									<option selected="selected" value="no">No</option>
+									<option value="yes">Yes</option>
+								</select>
+							  </div>
+						</div>    
+						<div class="col-md-4 text-center">
+							<h2 class="heading-section mb-4">
+								<small>Politics</small>
+							</h2>
+							<div class="image-wrap">
+								<label for="myCheckbox17"><img src="static/images/politics.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+							</div>
+							<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">Politics</label>
+								<select multiple class="form-control" name="politics">
+									<option selected="selected" value="no">No</option>
+									<option value="yes">Yes</option>
+								</select>
+							  </div>
+						</div>    
+						<div class="col-md-4 text-center">
+							<h2 class="heading-section mb-4">
+								<small>Reading</small>
+							</h2>
+							<div class="image-wrap">
+								<label for="myCheckbox18"><img src="static/images/reading.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+							</div>
+							<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">Reading</label>
+								<select multiple class="form-control" name="reading">
+									<option selected="selected" value="no">No</option>
+									<option value="yes">Yes</option>
+								</select>
+							  </div>
+						</div>
+						<div class="col-md-4 text-center">
+							<h2 class="heading-section mb-4">
+								<small>Languages</small>
+							</h2>
+							<div class="image-wrap">
+								<label for="myCheckbox19"><img src="static/images/languages.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+							</div>
+							<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">Languages</label>
+								<select multiple class="form-control" name="languages">
+									<option selected="selected" value="no">No</option>
+									<option value="yes">Yes</option>
+								</select>
+							  </div>
+												</div>
+						<div class="col-md-4 text-center">
+							<h2 class="heading-section mb-4">
+								<small>Musical Instruments</small>
+							</h2>
+							<div class="image-wrap">
+								<label for="myCheckbox20"><img src="static/images/instruments.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+							</div>
+							<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">Musical instruments</label>
+								<select multiple class="form-control" name="instruments">
+									<option selected="selected" value="no">No</option>
+									<option value="yes">Yes</option>
+								</select>
+							  </div>
+						</div>
+						<div class="col-md-4 text-center">
+							<h2 class="heading-section mb-4">
+								<small>Writing</small>
+							</h2>
+							<div class="image-wrap">
+								<label for="myCheckbox21"><img src="static/images/writing.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+							</div>
+							<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">Writing</label>
+								<select multiple class="form-control" name="writing">
+									<option selected="selected" value="no">No</option>
+									<option value="yes">Yes</option>
+								</select>
+							  </div>
+						</div>
+						<div class="col-md-4 text-center">
+							<h2 class="heading-section mb-4">
+								<small>Sport</small>
+							</h2>
+							<div class="image-wrap">
+								<label for="myCheckbox22"><img src="static/images/sport.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+							</div>
+							<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">Sports</label>
+								<select multiple class="form-control" name="sports">
+									<option selected="selected" value="no">No</option>
+									<option value="yes">Yes</option>
+								</select>
+							  </div>
+						</div>
+						<div class="col-md-4 text-center">
+							<h2 class="heading-section mb-4">
+								<small>Celebrities</small>
+							</h2>
+							<div class="image-wrap">
+								<label for="myCheckbox23"><img src="static/images/celebrities.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+							</div>
+							<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">Celebrities</label>
+								<select multiple class="form-control" name="celebrities">
+									<option selected="selected" value="no">No</option>
+									<option value="yes">Yes</option>
+								</select>
+							  </div>
+						</div>
+						<div class="col-md-4 text-center">
+							<h2 class="heading-section mb-4">
+								<small>Science & technologies</small>
+							</h2>
+							<div class="image-wrap">
+								<label for="myCheckbox24"><img src="static/images/science.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+							</div>
+							<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">Science & Technology</label>
+								<select multiple class="form-control" name="technology">
+									<option selected="selected" value="no">No</option>
+									<option value="yes">Yes</option>
+								</select>
+							  </div>
+						</div>
+						<div class="col-md-4 text-center">
+							<h2 class="heading-section mb-4">
+								<small>Theater</small>
+							</h2>
+							<div class="image-wrap">
+								<label for="myCheckbox25"><img src="static/images/theater.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+							</div>
+							<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">Theater</label>
+								<select multiple class="form-control" name="theater">
+									<option selected="selected" value="no">No</option>
+									<option value="yes">Yes</option>
+								</select>
+							  </div>
+                        </div>
+                </div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+			  <div class="text-center">
+				<button class="btn btn-primary" type="submit" id="singlebutton"> Valider</button>
+			  </div>
+			</div>
+		  </div> 
+		</form>
+  </section> 
+
+  
+
+  <!-- - - - - -end- - - - -  -->
+	
+
+  <footer class="ftco-section ftco-section-2">
+	  <div class="col-md-12 text-center">
+	  <p class="mb-0">
+		<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+		 Merci d'avoir utilise Klatch <i class="icon-heart" aria-hidden="true"></i> 
+		<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	  </p>
+	</div>
+  </footer>
+
+</div>
+
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/jquery-migrate-3.0.1.min.js"></script>
+<script src="static/js/popper.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/jquery.easing.1.3.js"></script>
+<script src="static/js/jquery.waypoints.min.js"></script>
+<script src="static/js/jquery.stellar.min.js"></script>
+<script src="static/js/owl.carousel.min.js"></script>
+<script src="static/js/jquery.magnific-popup.min.js"></script>
+<script src="static/js/aos.js"></script>
+
+<script src="static/js/nouislider.min.js"></script>
+<script src="static/js/moment-with-locales.min.js"></script>
+<script src="static/js/bootstrap-datetimepicker.min.js"></script>
+<script src="static/js/main.js"></script>
+
+
+
+{%endblock%}

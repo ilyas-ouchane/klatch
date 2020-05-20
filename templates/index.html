@@ -1,0 +1,120 @@
+{% extends "layout.html" %}
+
+{%block body%}
+
+<div class="main-section">
+
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	<div class="container">
+	  <a class="navbar-brand" href="/">Klatch.</a>
+	  <a class="nav-item" href="/">{{ session['prenom_user']}} {{ session['nom_user']}}</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="oi oi-menu"></span> Menu
+	  </button>
+	  <div class="collapse navbar-collapse" id="ftco-nav">
+		<ul class="navbar-nav ml-auto">
+			{% if session['prenom_user'] %}
+				<li class="nav-item"><a href="/create_chatroom" class="nav-link icon d-flex align-items-center"> Créer une chatroom</a></li>
+				<li class="nav-item cta"><a href="/logout" class="nav-link icon d-flex align-items-center"> Logout</a></li>
+			{%else %}
+				<li class="nav-item"><a href="/login" class="nav-link icon d-flex align-items-center"> Login</a></li>
+				<li class="nav-item cta"><a href="/register" class="nav-link icon d-flex align-items-center"> Register</a></li>
+			{% endif %}
+
+
+		</ul>
+	  </div>
+	  </div>
+  </nav>
+<!-- END nav -->
+
+  <section class="hero-wrap js-fullheight" style="background-image: url(static/images/bg_1.jpg);" data-stellar-background-ratio="0.5">
+	  <div class="overlay"></div>
+	  <div class="container">
+		  <div class="row description js-fullheight align-items-center justify-content-center">
+			  <div class="col-md-8 text-center">
+				  <div class="text">
+					  <h1 class="mb-4"><span>Klatch</span></h1>
+					  <h4 class="mb-5 mt-2">Chatroom avec recommendation chatbot.</h4>
+				  </div>
+			  </div>
+		  </div>
+	  </div>
+	  <div class="mouse">
+		<a href="#" class="mouse-icon rounded-circle bg-danger">
+			<div class="mouse-wheel"><span class="ion-ios-arrow-round-down text-light"></span></div>
+		</a>
+	</div>
+  </section>
+  <!-- - - - - -end- - - - -  -->
+
+  <section class="ftco-section ftco-section-2 bg-light" id="cards">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2 class="heading-section mb-4 pb-md-3">
+					Chatrooms
+				</h2>
+			</div>
+		</div>
+		<div class="row">
+			{% for cr in nomsChatrooms %}
+			<div class="col-md-4">
+				<div class="card text-center">
+				  <div class="card-img">
+					  <div class="image-wrap">
+							<img src="static/images/bg_3.jpg" alt="Round Image" class="rounded img-fluid image image-2 image-full">
+						</div>
+					</div>
+				  <div class="card-body pb-5">
+					<h5 class="card-title mb-0 text-primary">{{cr["nomchatroom"]}}</h5>
+					{% for pr in preferencesChatrooms %}
+						<span class="position d-block mb-4">{{pr["Music"]}}</span>
+					{%endfor%}
+					<p class="card-text">{{cr["description"]}}</p>
+					<a href="/chatroom" class="btn btn-primary">Join Chaatroom</a>
+				  </div>
+				</div>
+			</div>
+			{%endfor%}
+		</div>
+	</div>
+</section>
+<!-- - - - - -end- - - - -  -->
+	
+
+  <footer class="ftco-section ftco-section-2">
+	  <div class="col-md-12 text-center">
+	  <p class="mb-0">
+		<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+		 Merci d'avoir utilise Klatch <i class="icon-heart" aria-hidden="true"></i> 
+		<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	  </p>
+	</div>
+  </footer>
+
+</div>
+
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/jquery-migrate-3.0.1.min.js"></script>
+<script src="static/js/popper.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/jquery.easing.1.3.js"></script>
+<script src="static/js/jquery.waypoints.min.js"></script>
+<script src="static/js/jquery.stellar.min.js"></script>
+<script src="static/js/owl.carousel.min.js"></script>
+<script src="static/js/jquery.magnific-popup.min.js"></script>
+<script src="static/js/aos.js"></script>
+
+<script src="static/js/nouislider.min.js"></script>
+<script src="static/js/moment-with-locales.min.js"></script>
+<script src="static/js/bootstrap-datetimepicker.min.js"></script>
+<script src="static/js/main.js"></script>
+
+
+
+{%endblock%}
