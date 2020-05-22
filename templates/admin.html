@@ -14,7 +14,6 @@
 	  <div class="collapse navbar-collapse" id="ftco-nav">
 		<ul class="navbar-nav ml-auto">
 			{% if session['prenom_user'] %}
-				<li class="nav-item"><a href="/create_chatroom" class="nav-link icon d-flex align-items-center"> Créer une chatroom</a></li>
 				<li class="nav-item cta"><a href="/logout" class="nav-link icon d-flex align-items-center"> Logout</a></li>
 			{%else %}
 				<li class="nav-item"><a href="/login" class="nav-link icon d-flex align-items-center"> Login</a></li>
@@ -56,9 +55,10 @@
 					Chatrooms
 				</h2>
 			</div>
-		</div>
+        </div>
+        <form action="/deletecr" method="POST">
 		<div class="row">
-			{% for cr in nomsChatrooms %}
+            {% for cr in nomsChatrooms %}
 			<div class="col-md-4">
 				<div class="card text-center">
 				  <div class="card-img">
@@ -76,13 +76,41 @@
 							{%endif%}
 						{%endfor%}
 					{%endfor%}
-					<p class="card-text">{{cr["description"]}}</p>
-					<a href="/chatroom" class="btn btn-primary">Join Chaatroom</a>
+                    <p class="card-text">{{cr["description"]}}</p>
+                    <p class="card-text">Reports
+                    </p>
+					<div class="w-100 mb-4">
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                          Delete Chatroom
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Write the chatroom name : {{cr["nomchatroom"]}}</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                    <input type="text" name="nomcr" class="form-control" placeholder="Chatroom name">
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-info">Save changes</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
 				  </div>
 				</div>
 			</div>
 			{%endfor%}
-		</div>
+        </div>
+    </form>
 	</div>
 </section>
 <!-- - - - - -end- - - - -  -->

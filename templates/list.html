@@ -49,41 +49,7 @@
   <!-- - - - - -end- - - - -  -->
 
   <section class="ftco-section ftco-section-2 bg-light" id="cards">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<h2 class="heading-section mb-4 pb-md-3">
-					Chatrooms
-				</h2>
-			</div>
-		</div>
-		<div class="row">
-			{% for cr in nomsChatrooms %}
-			<div class="col-md-4">
-				<div class="card text-center">
-				  <div class="card-img">
-					  <div class="image-wrap">
-							<img src="static/images/bg_3.jpg" alt="Round Image" class="rounded img-fluid image image-2 image-full">
-						</div>
-					</div>
-				  <div class="card-body pb-5">
-					<h5 class="card-title mb-0 text-primary">{{cr["nomchatroom"]}}</h5>
-					{% for pr in preferencesChatrooms %}
-						{% for i in preferencesTab %}
-							{% if pr[i] == "yes"%}
-								<span class="position d-block mb-4">{{i}}</span>
-							{% else %}
-							{%endif%}
-						{%endfor%}
-					{%endfor%}
-					<p class="card-text">{{cr["description"]}}</p>
-					<a href="/chatroom" class="btn btn-primary">Join Chaatroom</a>
-				  </div>
-				</div>
-			</div>
-			{%endfor%}
-		</div>
-	</div>
+        <p>{{chatroom_recommended_id}}</p>
 </section>
 <!-- - - - - -end- - - - -  -->
 	
