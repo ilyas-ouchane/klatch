@@ -1,0 +1,636 @@
+{% extends "layout.html" %}
+
+{%block body%}
+
+<div class="main-section">
+
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	<div class="container">
+	  <a class="navbar-brand" href="/">Klatch.</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="oi oi-menu"></span> Menu
+	  </button>
+	  <div class="collapse navbar-collapse" id="ftco-nav">
+		<ul class="navbar-nav ml-auto">
+		<li class="nav-item"><a href="/profile" class="nav-link icon d-flex align-items-center"> Profile</a></li>
+	     <li class="nav-item"><a href="/login" class="nav-link icon d-flex align-items-center"> Login</a></li>
+		  <li class="nav-item cta"><a href="/index" class="nav-link icon d-flex align-items-center"> Chatrooms</a></li>
+		  <li class="nav-item"><a href="#" class="nav-link icon d-flex align-items-center"><i class="ion-logo-facebook"></i><span class="d-lg-none ml-2">Facebook</span></a></li>
+		  <li class="nav-item"><a href="#" class="nav-link icon d-flex align-items-center"><i class="ion-logo-twitter"></i><span class="d-lg-none ml-2">Twitter</span></a></li>
+		  <li class="nav-item"><a href="#" class="nav-link icon d-flex align-items-center"><i class="ion-logo-instagram"></i><span class="d-lg-none ml-2">Instagram</span></a></li>
+		</ul>
+	  </div>
+	  </div>
+  </nav>
+<!-- END nav -->
+
+  <section class="hero-wrap js-fullheight" style="background-image: url(static/images/bg_1.jpg);" data-stellar-background-ratio="0.5">
+	  <div class="overlay"></div>
+	  <div class="container">
+		  <div class="row description js-fullheight align-items-center justify-content-center">
+			  <div class="col-md-8 text-center">
+				  <div class="text">
+					  <h1 class="mb-4"><span>Klatch</span></h1>
+					  <h4 class="mb-5 mt-2">Chatrooms recommendation app.</h4>
+					  
+				  </div>
+			  </div>
+		  </div>
+	  </div>
+	  <div class="mouse">
+			<a href="#" class="mouse-icon rounded-circle bg-danger">
+				<div class="mouse-wheel"><span class="ion-ios-arrow-round-down text-light"></span></div>
+			</a>
+		</div>
+  </section>
+
+  <!-- - - - - -end- - - - -  -->
+
+  <form action="" method="POST" enctype="multipart/form-data">
+  <section class="ftco-section" id="inputs">
+		<div class="container">
+			<div class="row mb-5">
+				<div class="col-md-12">
+					<h2 class="heading-section">Creat your profile</h2>
+				</div>
+            </div>
+            
+			<div class="row">
+				<div class="col-md-3">
+		<div class="form-group has-default">
+		  <input type="text" name="nom" class="form-control" placeholder="First Name">
+		</div>
+		<div class="form-group has-default">
+		  <input type="text" name="prenom" class="form-control" placeholder="Laste name">
+		</div>
+		<div class="form-group has-default">
+			<input type="text" name="age" class="form-control" placeholder="Age">
+		  </div>
+		
+	  </div>
+	  <div class="col-md-3">
+		<div class="form-group">
+				<input type="email" name="email" class="form-control" required>
+				<label class="form-control-placeholder" for="email">Email</label>
+			  </div>
+			  <div class="form-group">
+				<input type="password" name="password" class="form-control" required>
+				<label class="form-control-placeholder" for="password">Password</label>
+			  </div>
+	  </div>
+
+	  <div class="input-group">
+		<div class="input-group-prepend">
+		  <span class="input-group-text" id="inputGroupFileAddon01">Upload image</span>
+		</div>
+		<div class="custom-file">
+		  <input type="file" class="custom-file-input" name="pdp"
+			aria-describedby="inputGroupFileAddon01">
+		  <label class="custom-file-label" for="inputGroupFile01">Choose your profile image</label>
+		</div>
+	  </div>
+
+	  <div class="input-group">
+		<div class="input-group-prepend">
+		  <span class="input-group-text" id="inputGroupFileAddon01">Upload image</span>
+		</div>
+		<div class="custom-file">
+		  <input type="file" class="custom-file-input" name="pdc"
+			aria-describedby="inputGroupFileAddon01">
+		  <label class="custom-file-label" for="inputGroupFile01">Choose your cover image</label>
+		</div>
+	  </div>
+	 
+
+  <!-- <section class="ftco-section" id="checkRadios"> -->
+   
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 text-center">
+					<h2 class="heading-section mb-4">
+						<small>Music</small>
+					</h2>
+					<div class="image-wrap">
+						<img src="static/images/music.jpg" alt="Round Image" class="rounded img-fluid image image-2" />
+					</div>
+					<div class="form-group">
+						<label for="musicG">How often do you listen to music ?</label>
+						<select multiple class="form-control" name="musicG">
+						  <option value="1">All the time</option>
+						  <option value="2">Sometimes</option>
+						  <option value="3">Occasionnaly</option>
+						  <option value="4">Hardly ever</option>
+						  <option value="5">Never</option>
+						</select>
+					  </div>
+				</div>
+					<div class="col-md-4 text-center">
+						<h2 class="heading-section mb-4">
+							<small>HipHop</small>
+						</h2>
+						<div class="image-wrap">
+							<img src="static/images/hiphop.jpg" alt="Round Image" class="rounded img-fluid image image-2" />
+						</div>
+						<div class="mt-2 col-md-12"></div>
+						  <div class="form-group">
+							<label for="exampleFormControlSelect2">How much do you like Hiphop?</label>
+							<select multiple class="form-control" name="hiphop">
+							  <option value="1">A lot</option>
+							  <option value="2">A bit</option>
+							  <option value="3">I don't like it that much</option>
+							  <option value="4">I just don't</option>
+							  <option value="5">Hate it!</option>
+							</select>
+						  </div>
+					</div>
+					<div class="col-md-4 text-center">
+						<h2 class="heading-section mb-4">
+							<small>Rap</small>
+						</h2>
+						<div class="image-wrap">
+							<img src="static/images/rap.jpg" alt="Round Image" class="rounded img-fluid image image-2" />
+						</div>
+						<div class="mt-2 col-md-12"></div>
+						  <div class="form-group">
+							<label for="exampleFormControlSelect2">How much do you like Rap?</label>
+							<select multiple class="form-control" name="rap">
+								<option value="1">A lot</option>
+								<option value="2">A bit</option>
+								<option value="3">I don't like it that much</option>
+								<option value="4">I just don't</option>
+								<option value="5">Hate it!</option>
+							</select>
+						  </div>
+					</div>
+					<div class="col-md-4 text-center">
+						<h2 class="heading-section mb-4">
+							<small>Reggae</small>
+						</h2>
+						<div class="image-wrap">
+							<label for="myCheckbox4"><img src="static/images/reggae.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+						</div>
+						<div class="mt-2 col-md-12"></div>
+						  <div class="form-group">
+							<label for="raggae">How much do you like Raggae music?</label>
+							<select multiple class="form-control" name="raggae">
+								<option value="1">A lot</option>
+							  <option value="2">A bit</option>
+							  <option value="3">I don't like it that much</option>
+							  <option value="4">I just don't</option>
+							  <option value="5">Hate it!</option>
+							</select>
+						  </div>
+					</div>
+					<div class="col-md-4 text-center">
+						<h2 class="heading-section mb-4">
+							<small>Swing</small>
+						</h2>
+						<div class="image-wrap">
+							<label for="myCheckbox5"><img src="static/images/swing.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+						</div>
+						<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">How much do you like Swing music?</label>
+								<select multiple class="form-control" name="swing">
+									<option value="1">A lot</option>
+									<option value="2">A bit</option>
+									<option value="3">I don't like it that much</option>
+									<option value="4">I just don't</option>
+									<option value="5">Hate it!</option>
+								</select>
+							  </div>
+					</div>
+					<div class="col-md-4 text-center">
+						<h2 class="heading-section mb-4">
+							<small>Jazz</small>
+						</h2>
+						<div class="image-wrap">
+							<label for="myCheckbox6"><img src="static/images/jazz.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+						</div>
+						<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">How much do you like Jazz?</label>
+								<select multiple class="form-control" name="jazz">
+									<option value="1">A lot</option>
+									<option value="2">A bit</option>
+									<option value="3">I don't like it that much</option>
+									<option value="4">I just don't</option>
+									<option value="5">Hate it!</option>
+								</select>
+							  </div>
+					</div>
+					<div class="col-md-4 text-center">
+						<h2 class="heading-section mb-4">
+							<small>Movies</small>
+						</h2>
+						<div class="image-wrap">
+							<label for="myCheckbox7"><img src="static/images/movies.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+						</div>
+						<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">How much do you like Movies in general??</label>
+								<select multiple class="form-control" name="moviesG">
+									<option value="1">A lot</option>
+									<option value="2">A bit</option>
+									<option value="3">I don't like it that much</option>
+									<option value="4">I just don't</option>
+									<option value="5">Hate it!</option>
+								</select>
+							  </div>
+					</div>
+						<div class="col-md-4 text-center">
+							<h2 class="heading-section mb-4">
+								<small>Comedy</small>
+							</h2>
+							<div class="image-wrap">
+								<label for="myCheckbox8"><img src="static/images/comedy.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+							</div>
+							<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">How much do you like Comedy movies?</label>
+								<select multiple class="form-control" name="comedy">
+									<option value="1">A lot</option>
+									<option value="2">A bit</option>
+									<option value="3">I don't like it that much</option>
+									<option value="4">I just don't</option>
+									<option value="5">Hate it!</option>
+								</select>
+							  </div>
+						</div>
+						<div class="col-md-4 text-center">
+							<h2 class="heading-section mb-4">
+								<small>Romantic</small>
+							</h2>
+							<div class="image-wrap">
+								<label for="myCheckbox9"><img src="static/images/romantic.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+							</div>
+							<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">How much do you like romantic movies?</label>
+								<select multiple class="form-control" name="romantic">
+									<option value="1">A lot</option>
+									<option value="2">A bit</option>
+									<option value="3">I don't like it that much</option>
+									<option value="4">I just don't</option>
+									<option value="5">Hate it!</option>
+								</select>
+							  </div>
+						</div>
+						<div class="col-md-4 text-center">
+							<h2 class="heading-section mb-4">
+								<small>Sci-fi</small>
+							</h2>
+							<div class="image-wrap">
+								<label for="myCheckbox10"><img src="static/images/scifi.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+							</div>
+							<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">How much do you like sci-fiction movies?</label>
+								<select multiple class="form-control" name="scif">
+									<option value="1">A lot</option>
+									<option value="2">A bit</option>
+									<option value="3">I don't like it that much</option>
+									<option value="4">I just don't</option>
+									<option value="5">Hate it!</option>
+								</select>
+							  </div>
+						</div>
+						<div class="col-md-4 text-center">
+							<h2 class="heading-section mb-4">
+								<small>War</small>
+							</h2>
+							<div class="image-wrap">
+								<label for="myCheckbox11"><img src="static/images/war.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+							</div>
+							<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">How much do you like war movies?</label>
+								<select multiple class="form-control" name="war">
+									<option value="1">A lot</option>
+									<option value="2">A bit</option>
+									<option value="3">I don't like it that much</option>
+									<option value="4">I just don't</option>
+									<option value="5">Hate it!</option>
+								</select>
+							  </div>
+						</div>
+						<div class="col-md-4 text-center">
+							<h2 class="heading-section mb-4">
+								<small>Fantazy/Fairy tales</small>
+							</h2>
+							<div class="image-wrap">
+								<label for="myCheckbox12"><img src="static/images/fanatazy.png" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+							</div>
+							<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">How much do you like fantasy movies?</label>
+								<select multiple class="form-control" name="fantasy">
+									<option value="1">A lot</option>
+									<option value="2">A bit</option>
+									<option value="3">I don't like it that much</option>
+									<option value="4">I just don't</option>
+									<option value="5">Hate it!</option>
+								</select>
+							  </div>
+						</div>
+						<div class="col-md-4 text-center">
+							<h2 class="heading-section mb-4">
+								<small>Documentary</small>
+							</h2>
+							<div class="image-wrap">
+								<label for="myCheckbox13"><img src="static/images/documentary.png" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+							</div>
+							<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">How much do you like documentaries?</label>
+								<select multiple class="form-control" name="documentaries">
+									<option value="1">A lot</option>
+									<option value="2">A bit</option>
+									<option value="3">I don't like it that much</option>
+									<option value="4">I just don't</option>
+									<option value="5">Hate it!</option>
+								</select>
+							  </div>
+						</div>
+						<div class="col-md-4 text-center">
+							<h2 class="heading-section mb-4">
+								<small>Western</small>
+							</h2>
+							<div class="image-wrap">
+								<label for="myCheckbox14"><img src="static/images/western.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+							</div>
+							<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">How much do you like western movies?</label>
+								<select multiple class="form-control" name="western">
+									<option value="1">A lot</option>
+									<option value="2">A bit</option>
+									<option value="3">I don't like it that much</option>
+									<option value="4">I just don't</option>
+									<option value="5">Hate it!</option>
+								</select>
+							  </div>
+						</div> 
+						<div class="col-md-4 text-center">
+							<h2 class="heading-section mb-4">
+								<small>History</small>
+							</h2>
+							<div class="image-wrap">
+								<label for="myCheckbox15"><img src="static/images/history.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+							</div>
+							<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">How much do you like history movies?</label>
+								<select multiple class="form-control" name="history">
+									<option value="1">A lot</option>
+									<option value="2">A bit</option>
+									<option value="3">I don't like it that much</option>
+									<option value="4">I just don't</option>
+									<option value="5">Hate it!</option>
+								</select>
+							  </div>
+						</div> 
+						<div class="col-md-4 text-center">
+							<h2 class="heading-section mb-4">
+								<small>Psychology</small>
+							</h2>
+							<div class="image-wrap">
+								<label for="myCheckbox16"><img src="static/images/psychology.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+							</div>
+							<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">How much do you like psychology?</label>
+								<select multiple class="form-control" name="psychology">
+									<option value="1">A lot</option>
+									<option value="2">A bit</option>
+									<option value="3">I don't like it that much</option>
+									<option value="4">I just don't</option>
+									<option value="5">Hate it!</option>
+								</select>
+							  </div>
+						</div>    
+						<div class="col-md-4 text-center">
+							<h2 class="heading-section mb-4">
+								<small>Politics</small>
+							</h2>
+							<div class="image-wrap">
+								<label for="myCheckbox17"><img src="static/images/politics.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+							</div>
+							<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">How much do you like politics?</label>
+								<select multiple class="form-control" name="politics">
+									<option value="1">A lot</option>
+									<option value="2">A bit</option>
+									<option value="3">I don't like it that much</option>
+									<option value="4">I just don't</option>
+									<option value="5">Hate it!</option>
+								</select>
+							  </div>
+						</div>    
+						<div class="col-md-4 text-center">
+							<h2 class="heading-section mb-4">
+								<small>Reading</small>
+							</h2>
+							<div class="image-wrap">
+								<label for="myCheckbox18"><img src="static/images/reading.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+							</div>
+							<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">How much do you like reading?</label>
+								<select multiple class="form-control" name="reading">
+									<option value="1">A lot</option>
+									<option value="2">A bit</option>
+									<option value="3">I don't like it that much</option>
+									<option value="4">I just don't</option>
+									<option value="5">Hate it!</option>
+								</select>
+							  </div>
+						</div>
+						<div class="col-md-4 text-center">
+							<h2 class="heading-section mb-4">
+								<small>Languages</small>
+							</h2>
+							<div class="image-wrap">
+								<label for="myCheckbox19"><img src="static/images/languages.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+							</div>
+							<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">How much do you like languages?</label>
+								<select multiple class="form-control" name="languages">
+									<option value="1">A lot</option>
+									<option value="2">A bit</option>
+									<option value="3">I don't like it that much</option>
+									<option value="4">I just don't</option>
+									<option value="5">Hate it!</option>
+								</select>
+							  </div>
+												</div>
+						<div class="col-md-4 text-center">
+							<h2 class="heading-section mb-4">
+								<small>Musical Instruments</small>
+							</h2>
+							<div class="image-wrap">
+								<label for="myCheckbox20"><img src="static/images/instruments.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+							</div>
+							<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">How much do you like musical instruments?</label>
+								<select multiple class="form-control" name="instruments">
+									<option value="1">A lot</option>
+									<option value="2">A bit</option>
+									<option value="3">I don't like it that much</option>
+									<option value="4">I just don't</option>
+									<option value="5">Hate it!</option>
+								</select>
+							  </div>
+						</div>
+						<div class="col-md-4 text-center">
+							<h2 class="heading-section mb-4">
+								<small>Writing</small>
+							</h2>
+							<div class="image-wrap">
+								<label for="myCheckbox21"><img src="static/images/writing.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+							</div>
+							<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">How much do you like writing?</label>
+								<select multiple class="form-control" name="writing">
+									<option value="1">A lot</option>
+									<option value="2">A bit</option>
+									<option value="3">I don't like it that much</option>
+									<option value="4">I just don't</option>
+									<option value="5">Hate it!</option>
+								</select>
+							  </div>
+						</div>
+						<div class="col-md-4 text-center">
+							<h2 class="heading-section mb-4">
+								<small>Sport</small>
+							</h2>
+							<div class="image-wrap">
+								<label for="myCheckbox22"><img src="static/images/sport.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+							</div>
+							<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">How much do you like sports?</label>
+								<select multiple class="form-control" name="sports">
+									<option value="1">A lot</option>
+									<option value="2">A bit</option>
+									<option value="3">I don't like it that much</option>
+									<option value="4">I just don't</option>
+									<option value="5">Hate it!</option>
+								</select>
+							  </div>
+						</div>
+						<div class="col-md-4 text-center">
+							<h2 class="heading-section mb-4">
+								<small>Celebrities</small>
+							</h2>
+							<div class="image-wrap">
+								<label for="myCheckbox23"><img src="static/images/celebrities.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+							</div>
+							<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">How much do you like celebrities?</label>
+								<select multiple class="form-control" name="celebrities">
+									<option value="1">A lot</option>
+									<option value="2">A bit</option>
+									<option value="3">I don't like it that much</option>
+									<option value="4">I just don't</option>
+									<option value="5">Hate it!</option>
+								</select>
+							  </div>
+						</div>
+						<div class="col-md-4 text-center">
+							<h2 class="heading-section mb-4">
+								<small>Science & technologies</small>
+							</h2>
+							<div class="image-wrap">
+								<label for="myCheckbox24"><img src="static/images/science.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+							</div>
+							<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">How much do you like science and technology?</label>
+								<select multiple class="form-control" name="technology">
+									<option value="1">A lot</option>
+									<option value="2">A bit</option>
+									<option value="3">I don't like it that much</option>
+									<option value="4">I just don't</option>
+									<option value="5">Hate it!</option>
+								</select>
+							  </div>
+						</div>
+						<div class="col-md-4 text-center">
+							<h2 class="heading-section mb-4">
+								<small>Theater</small>
+							</h2>
+							<div class="image-wrap">
+								<label for="myCheckbox25"><img src="static/images/theater.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
+							</div>
+							<div class="mt-2 col-md-12"></div>
+							  <div class="form-group">
+								<label for="exampleFormControlSelect2">How much do you like theater?</label>
+								<select multiple class="form-control" name="theater">
+									<option value="1">A lot</option>
+									<option value="2">A bit</option>
+									<option value="3">I don't like it that much</option>
+									<option value="4">I just don't</option>
+									<option value="5">Hate it!</option>
+								</select>
+							  </div>
+						</div>
+
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+			  <div class="text-center">
+				<button class="btn btn-primary" type="submit" id="singlebutton"> Valider</button>
+			  </div>
+			</div>
+		  </div> 
+		</form>
+  </section> 
+
+  
+
+  <!-- - - - - -end- - - - -  -->
+	
+
+  <footer class="ftco-section ftco-section-2">
+	  <div class="col-md-12 text-center">
+	  <p class="mb-0">
+		<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+		 Thanks for using Klatch <i class="icon-heart" aria-hidden="true"></i> 
+		<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	  </p>
+	</div>
+  </footer>
+
+</div>
+
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/jquery-migrate-3.0.1.min.js"></script>
+<script src="static/js/popper.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/jquery.easing.1.3.js"></script>
+<script src="static/js/jquery.waypoints.min.js"></script>
+<script src="static/js/jquery.stellar.min.js"></script>
+<script src="static/js/owl.carousel.min.js"></script>
+<script src="static/js/jquery.magnific-popup.min.js"></script>
+<script src="static/js/aos.js"></script>
+
+<script src="static/js/nouislider.min.js"></script>
+<script src="static/js/moment-with-locales.min.js"></script>
+<script src="static/js/bootstrap-datetimepicker.min.js"></script>
+<script src="static/js/main.js"></script>
+
+
+
+{%endblock%}

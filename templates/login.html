@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+{%include "includes/_message.html"%}
+{%block body%}
+<section class="hero-wrap js-fullheight" style="background-image: url(static/images/bg_1.jpg);" data-stellar-background-ratio="0.5">
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	<div class="container">
+	  <a class="navbar-brand" href="/">Klatch.</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="oi oi-menu"></span> Menu
+	  </button>
+	  <div class="collapse navbar-collapse" id="ftco-nav">
+		<ul class="navbar-nav ml-auto">
+	     <li class="nav-item"><a href="/" class="nav-link icon d-flex align-items-center">Home</a></li>
+		  <li class="nav-item cta"><a href="/" class="nav-link icon d-flex align-items-center">Chatrooms</a></li>
+		  <li class="nav-item"><a href="#" class="nav-link icon d-flex align-items-center"><i class="ion-logo-facebook"></i><span class="d-lg-none ml-2">Facebook</span></a></li>
+		  <li class="nav-item"><a href="#" class="nav-link icon d-flex align-items-center"><i class="ion-logo-twitter"></i><span class="d-lg-none ml-2">Twitter</span></a></li>
+		  <li class="nav-item"><a href="#" class="nav-link icon d-flex align-items-center"><i class="ion-logo-instagram"></i><span class="d-lg-none ml-2">Instagram</span></a></li>
+		</ul>
+	  </div>
+	  </div>
+  </nav>
+    <form action="{{ url_for('login') }}" method="POST">
+        <section class="ftco-section" id="inputs">
+              <div class="container" id="loginForm">
+                  <div class="row mb-5  description align-items-center justify-content-center">
+                      <div class="col-md-12">
+                          <h2 class="heading-section" style="font-size:300%; color:rgb(255, 255, 255);  text-align:center;" >Connect</h2>
+                      </div>
+            <div class="col-md-3 ">
+              <div class="form-group">
+                <input type="email" name="email" class="form-control" required>
+                <label class="form-control-placeholder" for="email">Email</label>
+              </div>
+              <div class="form-group">
+                 <input type="password" name="password" class="form-control" required>
+                <label class="form-control-placeholder" for="email">Password</label>
+              </div> 
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="text-center">
+                          <button class="btn btn-primary" type="submit" id="singlebutton">Submit</button>
+                        </div>
+                      </div>
+                    </div>       
+            </div>
+                  </div>
+              </div>
+          </section>
+      </form>
+</section>
+<footer class="ftco-section ftco-section-2">
+  <div class="col-md-12 text-center">
+  <p class="mb-0">
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+   Welcome to Klatch <i class="icon-heart" aria-hidden="true"></i> 
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  </p>
+</div>
+</footer>
+
+{%endblock%}
