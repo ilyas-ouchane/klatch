@@ -46,7 +46,7 @@
 
   <!-- - - - - -end- - - - -  -->
 
-  <form action="" method="POST">
+  <form action="" method="POST" enctype="multipart/form-data">
   <section class="ftco-section" id="inputs">
 		<div class="container">
 			<div class="row mb-5">
@@ -81,12 +81,45 @@
 		  <div class="col-md-4 text-center">
 			<div class="form-group">
 				<label for="musicG">What's your gender ?</label>
-				<select multiple class="form-control" name="genre">
-				  <option value="1">Male</option>
-				  <option value="2">Female</option>
-				</select>
+				<!-- <select multiple class="form-control" name="genre">
+				  <option value="0">Male</option>
+				  <option value="1">Female</option>
+				</select> -->
+				<div class="form-radio">
+					<div class="radio">
+						  <label>
+							  <input value="0" type="radio" name="genre"> Male
+							  <span class="checkmark"></span>
+						  </label>
+						  <label>
+							<input value="1" type="radio" name="genre"> Female
+							<span class="checkmark"></span>
+						</label>
+					</div>
+				</div>
 			  </div>
 		</div>
+		<div class="input-group">
+			<!-- <div class="input-group-prepend">
+			  <span class="input-group-text" id="inputGroupFileAddon01">Upload image</span>
+			</div> -->
+			<div class="custom-file">
+			  <input type="file" class="custom-file-input" name="pdp"
+				aria-describedby="inputGroupFileAddon01">
+			  <label class="custom-file-label" for="inputGroupFile01">Choose your profile image</label>
+			</div>
+		  </div>
+
+		  <div class="input-group">
+			<!-- <div class="input-group-prepend">
+			  <span class="input-group-text" id="inputGroupFileAddon01">Upload image</span>
+			</div> -->
+			<div class="custom-file">
+			  <input type="file" class="custom-file-input" name="pdc"
+				aria-describedby="inputGroupFileAddon01">
+			  <label class="custom-file-label" for="inputGroupFile01">Choose your cover image</label>
+			</div>
+		  </div>
 		  
 	 
 
@@ -101,7 +134,7 @@
 					<div class="image-wrap">
 						<img src="static/images/music.jpg" alt="Round Image" class="rounded img-fluid image image-2" />
 					</div>
-					<div class="form-group">
+					<!-- <div class="form-group">
 						<label for="musicG">How often do you listen to music ?</label>
 						<select multiple class="form-control" name="musicG">
 						  <option value="1">All the time</option>
@@ -110,7 +143,31 @@
 						  <option value="4">Hardly ever</option>
 						  <option value="5">Never</option>
 						</select>
-					  </div>
+					</div> -->
+					<div class="form-radio">
+						<div class="radio">
+							  <label>
+								  <input value="1" type="radio" name="musicG"> All the time
+								  <span class="checkmark"></span>
+							  </label>
+							  <label>
+								<input value="2" type="radio" name="musicG"> Sometimes
+								<span class="checkmark"></span>
+							</label>
+							<label>
+								<input value="3" type="radio" name="musicG"> Occasionnaly
+								<span class="checkmark"></span>
+							</label>
+							<label>
+								<input value="4" type="radio" name="musicG"> Hardly ever
+								<span class="checkmark"></span>
+							</label>
+							<label>
+								<input value="5" type="radio" name="musicG"> A lot
+								<span class="checkmark"></span>
+							</label>
+						</div>
+					</div>
 				</div>
 					<div class="col-md-4 text-center">
 						<h2 class="heading-section mb-4">
@@ -122,32 +179,37 @@
 						<div class="mt-2 col-md-12"></div>
 						  <div class="form-group">
 							<label for="exampleFormControlSelect2">How much do you like Hiphop?</label>
-							<select multiple class="form-control" name="hiphop">
+							<!-- <select multiple class="form-control" name="hiphop">
 							  <option value="1">A lot</option>
 							  <option value="2">A bit</option>
 							  <option value="3">I don't like it that much</option>
 							  <option value="4">I just don't</option>
 							  <option value="5">Hate it!</option>
-							</select>
-						  </div>
-					</div>
-					<div class="col-md-4 text-center">
-						<h2 class="heading-section mb-4">
-							<small>Rap</small>
-						</h2>
-						<div class="image-wrap">
-							<img src="static/images/rap.jpg" alt="Round Image" class="rounded img-fluid image image-2" />
-						</div>
-						<div class="mt-2 col-md-12"></div>
-						  <div class="form-group">
-							<label for="exampleFormControlSelect2">How much do you like Rap?</label>
-							<select multiple class="form-control" name="rap">
-								<option value="1">A lot</option>
-								<option value="2">A bit</option>
-								<option value="3">I don't like it that much</option>
-								<option value="4">I just don't</option>
-								<option value="5">Hate it!</option>
-							</select>
+							</select> -->
+							<div class="form-radio">
+								<div class="radio">
+									  <label>
+										  <input value="1" type="radio" name="hiphop"> All the time
+										  <span class="checkmark"></span>
+									  </label>
+									  <label>
+										<input value="2" type="radio" name="hiphop"> Sometimes
+										<span class="checkmark"></span>
+									</label>
+									<label>
+										<input value="3" type="radio" name="hiphop"> Occasionnaly
+										<span class="checkmark"></span>
+									</label>
+									<label>
+										<input value="4" type="radio" name="hiphop"> Hardly ever
+										<span class="checkmark"></span>
+									</label>
+									<label>
+										<input value="5" type="radio" name="hiphop"> A lot
+										<span class="checkmark"></span>
+									</label>
+								</div>
+							</div>
 						  </div>
 					</div>
 					<div class="col-md-4 text-center">
@@ -160,13 +222,37 @@
 						<div class="mt-2 col-md-12"></div>
 						  <div class="form-group">
 							<label for="raggae">How much do you like Raggae music?</label>
-							<select multiple class="form-control" name="raggae">
+							<!-- <select multiple class="form-control" name="raggae">
 								<option value="1">A lot</option>
 							  <option value="2">A bit</option>
 							  <option value="3">I don't like it that much</option>
 							  <option value="4">I just don't</option>
 							  <option value="5">Hate it!</option>
-							</select>
+							</select> -->
+							<div class="form-radio">
+								<div class="radio">
+									  <label>
+										  <input value="1" type="radio" name="raggae"> All the time
+										  <span class="checkmark"></span>
+									  </label>
+									  <label>
+										<input value="2" type="radio" name="raggae"> Sometimes
+										<span class="checkmark"></span>
+									</label>
+									<label>
+										<input value="3" type="radio" name="raggae"> Occasionnaly
+										<span class="checkmark"></span>
+									</label>
+									<label>
+										<input value="4" type="radio" name="raggae"> Hardly ever
+										<span class="checkmark"></span>
+									</label>
+									<label>
+										<input value="5" type="radio" name="raggae"> Hate it!
+										<span class="checkmark"></span>
+									</label>
+								</div>
+							</div>
 						  </div>
 					</div>
 					<div class="col-md-4 text-center">
@@ -179,32 +265,37 @@
 						<div class="mt-2 col-md-12"></div>
 							  <div class="form-group">
 								<label for="exampleFormControlSelect2">How much do you like Swing music?</label>
-								<select multiple class="form-control" name="swing">
+								<!-- <select multiple class="form-control" name="swing">
 									<option value="1">A lot</option>
 									<option value="2">A bit</option>
 									<option value="3">I don't like it that much</option>
 									<option value="4">I just don't</option>
 									<option value="5">Hate it!</option>
-								</select>
-							  </div>
-					</div>
-					<div class="col-md-4 text-center">
-						<h2 class="heading-section mb-4">
-							<small>Jazz</small>
-						</h2>
-						<div class="image-wrap">
-							<label for="myCheckbox6"><img src="static/images/jazz.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
-						</div>
-						<div class="mt-2 col-md-12"></div>
-							  <div class="form-group">
-								<label for="exampleFormControlSelect2">How much do you like Jazz?</label>
-								<select multiple class="form-control" name="jazz">
-									<option value="1">A lot</option>
-									<option value="2">A bit</option>
-									<option value="3">I don't like it that much</option>
-									<option value="4">I just don't</option>
-									<option value="5">Hate it!</option>
-								</select>
+								</select> -->
+								<div class="form-radio">
+									<div class="radio">
+										  <label>
+											  <input value="1" type="radio" name="swing"> All the time
+											  <span class="checkmark"></span>
+										  </label>
+										  <label>
+											<input value="2" type="radio" name="swing"> Sometimes
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="3" type="radio" name="swing"> Occasionnaly
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="4" type="radio" name="swing"> Hardly ever
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="5" type="radio" name="swing"> Hate it!
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
 							  </div>
 					</div>
 					<div class="col-md-4 text-center">
@@ -215,16 +306,40 @@
 							<label for="myCheckbox7"><img src="static/images/movies.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
 						</div>
 						<div class="mt-2 col-md-12"></div>
-							  <div class="form-group">
+							<div class="form-group">
 								<label for="exampleFormControlSelect2">How much do you like Movies in general??</label>
-								<select multiple class="form-control" name="moviesG">
+								<!-- <select multiple class="form-control" name="moviesG">
 									<option value="1">A lot</option>
 									<option value="2">A bit</option>
 									<option value="3">I don't like it that much</option>
 									<option value="4">I just don't</option>
 									<option value="5">Hate it!</option>
-								</select>
-							  </div>
+								</select> -->
+								<div class="form-radio">
+									<div class="radio">
+										  <label>
+											  <input value="1" type="radio" name="moviesG"> All the time
+											  <span class="checkmark"></span>
+										  </label>
+										  <label>
+											<input value="2" type="radio" name="moviesG"> Sometimes
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="3" type="radio" name="moviesG"> Occasionnaly
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="4" type="radio" name="moviesG"> Hardly ever
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="5" type="radio" name="moviesG"> Hate it!
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
+							</div>
 					</div>
 						<div class="col-md-4 text-center">
 							<h2 class="heading-section mb-4">
@@ -236,13 +351,37 @@
 							<div class="mt-2 col-md-12"></div>
 							  <div class="form-group">
 								<label for="exampleFormControlSelect2">How much do you like Comedy movies?</label>
-								<select multiple class="form-control" name="comedy">
+								<!-- <select multiple class="form-control" name="comedy">
 									<option value="1">A lot</option>
 									<option value="2">A bit</option>
 									<option value="3">I don't like it that much</option>
 									<option value="4">I just don't</option>
 									<option value="5">Hate it!</option>
-								</select>
+								</select> -->
+								<div class="form-radio">
+									<div class="radio">
+										  <label>
+											  <input value="1" type="radio" name="comedy"> All the time
+											  <span class="checkmark"></span>
+										  </label>
+										  <label>
+											<input value="2" type="radio" name="comedy"> Sometimes
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="3" type="radio" name="comedy"> Occasionnaly
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="4" type="radio" name="comedy"> Hardly ever
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="5" type="radio" name="comedy"> Hate it!
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
 							  </div>
 						</div>
 						<div class="col-md-4 text-center">
@@ -255,13 +394,37 @@
 							<div class="mt-2 col-md-12"></div>
 							  <div class="form-group">
 								<label for="exampleFormControlSelect2">How much do you like romantic movies?</label>
-								<select multiple class="form-control" name="romantic">
+								<!-- <select multiple class="form-control" name="romantic">
 									<option value="1">A lot</option>
 									<option value="2">A bit</option>
 									<option value="3">I don't like it that much</option>
 									<option value="4">I just don't</option>
 									<option value="5">Hate it!</option>
-								</select>
+								</select> -->
+								<div class="form-radio">
+									<div class="radio">
+										  <label>
+											  <input value="1" type="radio" name="romantic"> All the time
+											  <span class="checkmark"></span>
+										  </label>
+										  <label>
+											<input value="2" type="radio" name="romantic"> Sometimes
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="3" type="radio" name="romantic"> Occasionnaly
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="4" type="radio" name="romantic"> Hardly ever
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="5" type="radio" name="romantic"> Hate it!
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
 							  </div>
 						</div>
 						<div class="col-md-4 text-center">
@@ -274,13 +437,37 @@
 							<div class="mt-2 col-md-12"></div>
 							  <div class="form-group">
 								<label for="exampleFormControlSelect2">How much do you like sci-fiction movies?</label>
-								<select multiple class="form-control" name="scif">
+								<!-- <select multiple class="form-control" name="scif">
 									<option value="1">A lot</option>
 									<option value="2">A bit</option>
 									<option value="3">I don't like it that much</option>
 									<option value="4">I just don't</option>
 									<option value="5">Hate it!</option>
-								</select>
+								</select> -->
+								<div class="form-radio">
+									<div class="radio">
+										  <label>
+											  <input value="1" type="radio" name="scif"> All the time
+											  <span class="checkmark"></span>
+										  </label>
+										  <label>
+											<input value="2" type="radio" name="scif"> Sometimes
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="3" type="radio" name="scif"> Occasionnaly
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="4" type="radio" name="scif"> Hardly ever
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="5" type="radio" name="scif"> Hate it!
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
 							  </div>
 						</div>
 						<div class="col-md-4 text-center">
@@ -293,13 +480,37 @@
 							<div class="mt-2 col-md-12"></div>
 							  <div class="form-group">
 								<label for="exampleFormControlSelect2">How much do you like war movies?</label>
-								<select multiple class="form-control" name="war">
+								<!-- <select multiple class="form-control" name="war">
 									<option value="1">A lot</option>
 									<option value="2">A bit</option>
 									<option value="3">I don't like it that much</option>
 									<option value="4">I just don't</option>
 									<option value="5">Hate it!</option>
-								</select>
+								</select> -->
+								<div class="form-radio">
+									<div class="radio">
+										  <label>
+											  <input value="1" type="radio" name="war"> All the time
+											  <span class="checkmark"></span>
+										  </label>
+										  <label>
+											<input value="2" type="radio" name="war"> Sometimes
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="3" type="radio" name="war"> Occasionnaly
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="4" type="radio" name="war"> Hardly ever
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="5" type="radio" name="war"> Hate it!
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
 							  </div>
 						</div>
 						<div class="col-md-4 text-center">
@@ -312,13 +523,37 @@
 							<div class="mt-2 col-md-12"></div>
 							  <div class="form-group">
 								<label for="exampleFormControlSelect2">How much do you like fantasy movies?</label>
-								<select multiple class="form-control" name="fantasy">
+								<!-- <select multiple class="form-control" name="fantasy">
 									<option value="1">A lot</option>
 									<option value="2">A bit</option>
 									<option value="3">I don't like it that much</option>
 									<option value="4">I just don't</option>
 									<option value="5">Hate it!</option>
-								</select>
+								</select> -->
+								<div class="form-radio">
+									<div class="radio">
+										  <label>
+											  <input value="1" type="radio" name="fantasy"> All the time
+											  <span class="checkmark"></span>
+										  </label>
+										  <label>
+											<input value="2" type="radio" name="fantasy"> Sometimes
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="3" type="radio" name="fantasy"> Occasionnaly
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="4" type="radio" name="fantasy"> Hardly ever
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="5" type="radio" name="fantasy"> Hate it!
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
 							  </div>
 						</div>
 						<div class="col-md-4 text-center">
@@ -331,13 +566,37 @@
 							<div class="mt-2 col-md-12"></div>
 							  <div class="form-group">
 								<label for="exampleFormControlSelect2">How much do you like documentaries?</label>
-								<select multiple class="form-control" name="documentaries">
+								<!-- <select multiple class="form-control" name="documentaries">
 									<option value="1">A lot</option>
 									<option value="2">A bit</option>
 									<option value="3">I don't like it that much</option>
 									<option value="4">I just don't</option>
 									<option value="5">Hate it!</option>
-								</select>
+								</select> -->
+								<div class="form-radio">
+									<div class="radio">
+										  <label>
+											  <input value="1" type="radio" name="documentaries"> All the time
+											  <span class="checkmark"></span>
+										  </label>
+										  <label>
+											<input value="2" type="radio" name="documentaries"> Sometimes
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="3" type="radio" name="documentaries"> Occasionnaly
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="4" type="radio" name="documentaries"> Hardly ever
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="5" type="radio" name="documentaries"> Hate it!
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
 							  </div>
 						</div>
 						<div class="col-md-4 text-center">
@@ -350,13 +609,37 @@
 							<div class="mt-2 col-md-12"></div>
 							  <div class="form-group">
 								<label for="exampleFormControlSelect2">How much do you like western movies?</label>
-								<select multiple class="form-control" name="western">
+								<!-- <select multiple class="form-control" name="western">
 									<option value="1">A lot</option>
 									<option value="2">A bit</option>
 									<option value="3">I don't like it that much</option>
 									<option value="4">I just don't</option>
 									<option value="5">Hate it!</option>
-								</select>
+								</select> -->
+								<div class="form-radio">
+									<div class="radio">
+										  <label>
+											  <input value="1" type="radio" name="western"> All the time
+											  <span class="checkmark"></span>
+										  </label>
+										  <label>
+											<input value="2" type="radio" name="western"> Sometimes
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="3" type="radio" name="western"> Occasionnaly
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="4" type="radio" name="western"> Hardly ever
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="5" type="radio" name="western"> Hate it!
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
 							  </div>
 						</div> 
 						<div class="col-md-4 text-center">
@@ -369,13 +652,37 @@
 							<div class="mt-2 col-md-12"></div>
 							  <div class="form-group">
 								<label for="exampleFormControlSelect2">How much do you like history movies?</label>
-								<select multiple class="form-control" name="history">
+								<!-- <select multiple class="form-control" name="history">
 									<option value="1">A lot</option>
 									<option value="2">A bit</option>
 									<option value="3">I don't like it that much</option>
 									<option value="4">I just don't</option>
 									<option value="5">Hate it!</option>
-								</select>
+								</select> -->
+								<div class="form-radio">
+									<div class="radio">
+										  <label>
+											  <input value="1" type="radio" name="history"> All the time
+											  <span class="checkmark"></span>
+										  </label>
+										  <label>
+											<input value="2" type="radio" name="history"> Sometimes
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="3" type="radio" name="history"> Occasionnaly
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="4" type="radio" name="history"> Hardly ever
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="5" type="radio" name="history"> Hate it!
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
 							  </div>
 						</div> 
 						<div class="col-md-4 text-center">
@@ -388,13 +695,37 @@
 							<div class="mt-2 col-md-12"></div>
 							  <div class="form-group">
 								<label for="exampleFormControlSelect2">How much do you like psychology?</label>
-								<select multiple class="form-control" name="psychology">
+								<!-- <select multiple class="form-control" name="psychology">
 									<option value="1">A lot</option>
 									<option value="2">A bit</option>
 									<option value="3">I don't like it that much</option>
 									<option value="4">I just don't</option>
 									<option value="5">Hate it!</option>
-								</select>
+								</select> -->
+								<div class="form-radio">
+									<div class="radio">
+										  <label>
+											  <input value="1" type="radio" name="psychology"> All the time
+											  <span class="checkmark"></span>
+										  </label>
+										  <label>
+											<input value="2" type="radio" name="psychology"> Sometimes
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="3" type="radio" name="psychology"> Occasionnaly
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="4" type="radio" name="psychology"> Hardly ever
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="5" type="radio" name="psychology"> Hate it!
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
 							  </div>
 						</div>    
 						<div class="col-md-4 text-center">
@@ -407,13 +738,37 @@
 							<div class="mt-2 col-md-12"></div>
 							  <div class="form-group">
 								<label for="exampleFormControlSelect2">How much do you like politics?</label>
-								<select multiple class="form-control" name="politics">
+								<!-- <select multiple class="form-control" name="politics">
 									<option value="1">A lot</option>
 									<option value="2">A bit</option>
 									<option value="3">I don't like it that much</option>
 									<option value="4">I just don't</option>
 									<option value="5">Hate it!</option>
-								</select>
+								</select> -->
+								<div class="form-radio">
+									<div class="radio">
+										  <label>
+											  <input value="1" type="radio" name="politics"> All the time
+											  <span class="checkmark"></span>
+										  </label>
+										  <label>
+											<input value="2" type="radio" name="politics"> Sometimes
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="3" type="radio" name="politics"> Occasionnaly
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="4" type="radio" name="politics"> Hardly ever
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="5" type="radio" name="politics"> Hate it!
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
 							  </div>
 						</div>    
 						<div class="col-md-4 text-center">
@@ -426,13 +781,37 @@
 							<div class="mt-2 col-md-12"></div>
 							  <div class="form-group">
 								<label for="exampleFormControlSelect2">How much do you like reading?</label>
-								<select multiple class="form-control" name="reading">
+								<!-- <select multiple class="form-control" name="reading">
 									<option value="1">A lot</option>
 									<option value="2">A bit</option>
 									<option value="3">I don't like it that much</option>
 									<option value="4">I just don't</option>
 									<option value="5">Hate it!</option>
-								</select>
+								</select> -->
+								<div class="form-radio">
+									<div class="radio">
+										  <label>
+											  <input value="1" type="radio" name="reading"> All the time
+											  <span class="checkmark"></span>
+										  </label>
+										  <label>
+											<input value="2" type="radio" name="reading"> Sometimes
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="3" type="radio" name="reading"> Occasionnaly
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="4" type="radio" name="reading"> Hardly ever
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="5" type="radio" name="reading"> Hate it!
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
 							  </div>
 						</div>
 						<div class="col-md-4 text-center">
@@ -445,15 +824,39 @@
 							<div class="mt-2 col-md-12"></div>
 							  <div class="form-group">
 								<label for="exampleFormControlSelect2">How much do you like languages?</label>
-								<select multiple class="form-control" name="languages">
+								<!-- <select multiple class="form-control" name="languages">
 									<option value="1">A lot</option>
 									<option value="2">A bit</option>
 									<option value="3">I don't like it that much</option>
 									<option value="4">I just don't</option>
 									<option value="5">Hate it!</option>
-								</select>
+								</select> -->
+								<div class="form-radio">
+									<div class="radio">
+										  <label>
+											  <input value="1" type="radio" name="languages"> All the time
+											  <span class="checkmark"></span>
+										  </label>
+										  <label>
+											<input value="2" type="radio" name="languages"> Sometimes
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="3" type="radio" name="languages"> Occasionnaly
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="4" type="radio" name="languages"> Hardly ever
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="5" type="radio" name="languages"> Hate it!
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
 							  </div>
-												</div>
+						</div>
 						<div class="col-md-4 text-center">
 							<h2 class="heading-section mb-4">
 								<small>Musical Instruments</small>
@@ -464,13 +867,37 @@
 							<div class="mt-2 col-md-12"></div>
 							  <div class="form-group">
 								<label for="exampleFormControlSelect2">How much do you like musical instruments?</label>
-								<select multiple class="form-control" name="instruments">
+								<!-- <select multiple class="form-control" name="instruments">
 									<option value="1">A lot</option>
 									<option value="2">A bit</option>
 									<option value="3">I don't like it that much</option>
 									<option value="4">I just don't</option>
 									<option value="5">Hate it!</option>
-								</select>
+								</select> -->
+								<div class="form-radio">
+									<div class="radio">
+										  <label>
+											  <input value="1" type="radio" name="instruments"> All the time
+											  <span class="checkmark"></span>
+										  </label>
+										  <label>
+											<input value="2" type="radio" name="instruments"> Sometimes
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="3" type="radio" name="instruments"> Occasionnaly
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="4" type="radio" name="instruments"> Hardly ever
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="5" type="radio" name="instruments"> Hate it!
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
 							  </div>
 						</div>
 						<div class="col-md-4 text-center">
@@ -483,13 +910,37 @@
 							<div class="mt-2 col-md-12"></div>
 							  <div class="form-group">
 								<label for="exampleFormControlSelect2">How much do you like writing?</label>
-								<select multiple class="form-control" name="writing">
+								<!-- <select multiple class="form-control" name="writing">
 									<option value="1">A lot</option>
 									<option value="2">A bit</option>
 									<option value="3">I don't like it that much</option>
 									<option value="4">I just don't</option>
 									<option value="5">Hate it!</option>
-								</select>
+								</select> -->
+								<div class="form-radio">
+									<div class="radio">
+										  <label>
+											  <input value="1" type="radio" name="writing"> All the time
+											  <span class="checkmark"></span>
+										  </label>
+										  <label>
+											<input value="2" type="radio" name="writing"> Sometimes
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="3" type="radio" name="writing"> Occasionnaly
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="4" type="radio" name="writing"> Hardly ever
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="5" type="radio" name="writing"> Hate it!
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
 							  </div>
 						</div>
 						<div class="col-md-4 text-center">
@@ -502,13 +953,37 @@
 							<div class="mt-2 col-md-12"></div>
 							  <div class="form-group">
 								<label for="exampleFormControlSelect2">How much do you like sports?</label>
-								<select multiple class="form-control" name="sports">
+								<!-- <select multiple class="form-control" name="sports">
 									<option value="1">A lot</option>
 									<option value="2">A bit</option>
 									<option value="3">I don't like it that much</option>
 									<option value="4">I just don't</option>
 									<option value="5">Hate it!</option>
-								</select>
+								</select> -->
+								<div class="form-radio">
+									<div class="radio">
+										  <label>
+											  <input value="1" type="radio" name="sports"> All the time
+											  <span class="checkmark"></span>
+										  </label>
+										  <label>
+											<input value="2" type="radio" name="sports"> Sometimes
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="3" type="radio" name="sports"> Occasionnaly
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="4" type="radio" name="sports"> Hardly ever
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="5" type="radio" name="sports"> Hate it!
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
 							  </div>
 						</div>
 						<div class="col-md-4 text-center">
@@ -521,13 +996,37 @@
 							<div class="mt-2 col-md-12"></div>
 							  <div class="form-group">
 								<label for="exampleFormControlSelect2">How much do you like celebrities?</label>
-								<select multiple class="form-control" name="celebrities">
+								<!-- <select multiple class="form-control" name="celebrities">
 									<option value="1">A lot</option>
 									<option value="2">A bit</option>
 									<option value="3">I don't like it that much</option>
 									<option value="4">I just don't</option>
 									<option value="5">Hate it!</option>
-								</select>
+								</select> -->
+								<div class="form-radio">
+									<div class="radio">
+										  <label>
+											  <input value="1" type="radio" name="celebrities"> All the time
+											  <span class="checkmark"></span>
+										  </label>
+										  <label>
+											<input value="2" type="radio" name="celebrities"> Sometimes
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="3" type="radio" name="celebrities"> Occasionnaly
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="4" type="radio" name="celebrities"> Hardly ever
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="5" type="radio" name="celebrities"> Hate it!
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
 							  </div>
 						</div>
 						<div class="col-md-4 text-center">
@@ -540,13 +1039,37 @@
 							<div class="mt-2 col-md-12"></div>
 							  <div class="form-group">
 								<label for="exampleFormControlSelect2">How much do you like science and technology?</label>
-								<select multiple class="form-control" name="technology">
+								<!-- <select multiple class="form-control" name="technology">
 									<option value="1">A lot</option>
 									<option value="2">A bit</option>
 									<option value="3">I don't like it that much</option>
 									<option value="4">I just don't</option>
 									<option value="5">Hate it!</option>
-								</select>
+								</select> -->
+								<div class="form-radio">
+									<div class="radio">
+										  <label>
+											  <input value="1" type="radio" name="technology"> All the time
+											  <span class="checkmark"></span>
+										  </label>
+										  <label>
+											<input value="2" type="radio" name="technology"> Sometimes
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="3" type="radio" name="technology"> Occasionnaly
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="4" type="radio" name="technology"> Hardly ever
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="5" type="radio" name="technology"> Hate it!
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
 							  </div>
 						</div>
 						<div class="col-md-4 text-center">
@@ -559,13 +1082,37 @@
 							<div class="mt-2 col-md-12"></div>
 							  <div class="form-group">
 								<label for="exampleFormControlSelect2">How much do you like theater?</label>
-								<select multiple class="form-control" name="theater">
+								<!-- <select multiple class="form-control" name="theater">
 									<option value="1">A lot</option>
 									<option value="2">A bit</option>
 									<option value="3">I don't like it that much</option>
 									<option value="4">I just don't</option>
 									<option value="5">Hate it!</option>
-								</select>
+								</select> -->
+								<div class="form-radio">
+									<div class="radio">
+										  <label>
+											  <input value="1" type="radio" name="theater"> All the time
+											  <span class="checkmark"></span>
+										  </label>
+										  <label>
+											<input value="2" type="radio" name="theater"> Sometimes
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="3" type="radio" name="theater"> Occasionnaly
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="4" type="radio" name="theater"> Hardly ever
+											<span class="checkmark"></span>
+										</label>
+										<label>
+											<input value="5" type="radio" name="theater"> Hate it!
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
 							  </div>
 						</div>
 

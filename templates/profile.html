@@ -63,17 +63,18 @@
                         <div class="card text-center">
                           <div class="card-img">
                               <div class="image-wrap">
-                                    <img src="static/images/bg_3.jpg" alt="Round Image" class="rounded img-fluid image image-2 image-full">
-                                    <div class="text">
+                                    <img src="{{url_for('file', filename=session['pdc_name'])}}" alt="Round Image" class="rounded img-fluid image image-2 image-full">
+                                    <img src="{{url_for('file', filename=session['pdp_name'])}}" alt="Round Image" class="img img-2 round-circle">
+                                    <!-- <div class="text">
                                         <div class="img img-2 round-circle" style="background-image: url(static/images/movies.jpg);"></div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                           <div class="card-body pb-5">
                             <h5 class="card-title mb-0 text-primary">{{ session['prenom_user']}} {{ session['nom_user']}}</h5>
-                            <span class="position d-block mb-4">Chatting Guru</span>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="btn btn-primary">Button</a>
+                            <span class="position d-block mb-4">Profil</span>
+                            <p class="card-text">You'll find here your preferences and chatrooms.</p>
+                            <a href="#" class="btn btn-primary">Welcome to your profile</a>
                           </div>
                         </div>
                     </div>
@@ -110,7 +111,7 @@
                                                                 <img src="static/images/war.jpg" alt="Circle Image" class="rounded-circle img-fluid image">
                                                                 <div class="text">
                                                                     <br>
-                                                                    <span class="position">War</span>
+                                                                    <span class="position">War : {{session['war']}}</span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -119,16 +120,7 @@
                                                                 <img src="static/images/hiphop.jpg" alt="Circle Image" class="rounded-circle img-fluid image">
                                                                 <div class="text">
                                                                     <br>
-                                                                    <span class="position">HipHop</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4 text-center">
-                                                            <div class="image-wrap">
-                                                                <img src="static/images/rap.jpg" alt="Circle Image" class="rounded-circle img-fluid image">
-                                                                <div class="text">
-                                                                    <br>
-                                                                    <span class="position">Rap</span>
+                                                                    <span class="position">HipHop : {{session['rap']}}</span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -137,7 +129,7 @@
                                                                 <img src="static/images/history.jpg" alt="Circle Image" class="rounded-circle img-fluid image">
                                                                 <div class="text">
                                                                     <br>
-                                                                    <span class="position">History</span>
+                                                                    <span class="position">History : {{session['history']}}</span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -146,10 +138,155 @@
                                                                 <img src="static/images/documentary.png" alt="Circle Image" class="rounded-circle img-fluid image">
                                                                 <div class="text">
                                                                     <br>
-                                                                    <span class="position">Documentary</span>
+                                                                    <span class="position">Documentary : {{session['documentary']}}</span>
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        <div class="col-md-4 text-center">
+                                                            <div class="image-wrap">
+                                                                <img src="static/images/music.jpg" alt="Circle Image" class="rounded-circle img-fluid image">
+                                                                <div class="text">
+                                                                    <br>
+                                                                    <span class="position">Music : {{session['music']}}</span>
+                                                                </div>
+                                                            </div>
+                                                        </div><div class="col-md-4 text-center">
+                                                            <div class="image-wrap">
+                                                                <img src="static/images/reggae.jpg" alt="Circle Image" class="rounded-circle img-fluid image">
+                                                                <div class="text">
+                                                                    <br>
+                                                                    <span class="position">Raggae : {{session['raggae']}}</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4 text-center">
+                                                            <div class="image-wrap">
+                                                                <img src="static/images/movies.jpg" alt="Circle Image" class="rounded-circle img-fluid image">
+                                                                <div class="text">
+                                                                    <br>
+                                                                    <span class="position">Movies : {{session['movies']}}</span>
+                                                                </div>
+                                                            </div>
+                                                        </div><div class="col-md-4 text-center">
+                                                            <div class="image-wrap">
+                                                                <img src="static/images/comedy.jpg" alt="Circle Image" class="rounded-circle img-fluid image">
+                                                                <div class="text">
+                                                                    <br>
+                                                                    <span class="position">Comedy : {{session['comedy']}}</span>
+                                                                </div>
+                                                            </div>
+                                                        </div><div class="col-md-4 text-center">
+                                                            <div class="image-wrap">
+                                                                <img src="static/images/romantic.jpg" alt="Circle Image" class="rounded-circle img-fluid image">
+                                                                <div class="text">
+                                                                    <br>
+                                                                    <span class="position">Romantic : {{session['romantic']}}</span>
+                                                                </div>
+                                                            </div>
+                                                        </div><div class="col-md-4 text-center">
+                                                            <div class="image-wrap">
+                                                                <img src="static/images/scifi.jpg" alt="Circle Image" class="rounded-circle img-fluid image">
+                                                                <div class="text">
+                                                                    <br>
+                                                                    <span class="position">Sci-fiction : {{session['scif']}}</span>
+                                                                </div>
+                                                            </div>
+                                                        </div><div class="col-md-4 text-center">
+                                                            <div class="image-wrap">
+                                                                <img src="static/images/fanatazy.png" alt="Circle Image" class="rounded-circle img-fluid image">
+                                                                <div class="text">
+                                                                    <br>
+                                                                    <span class="position">Fantazy : {{session['fantazy']}}</span>
+                                                                </div>
+                                                            </div>
+                                                        </div><div class="col-md-4 text-center">
+                                                            <div class="image-wrap">
+                                                                <img src="static/images/western.jpg" alt="Circle Image" class="rounded-circle img-fluid image">
+                                                                <div class="text">
+                                                                    <br>
+                                                                    <span class="position">Western : {{session['western']}}</span>
+                                                                </div>
+                                                            </div>
+                                                        </div><div class="col-md-4 text-center">
+                                                            <div class="image-wrap">
+                                                                <img src="static/images/history.jpg" alt="Circle Image" class="rounded-circle img-fluid image">
+                                                                <div class="text">
+                                                                    <br>
+                                                                    <span class="position">History : {{session['history']}}</span>
+                                                                </div>
+                                                            </div>
+                                                        </div><div class="col-md-4 text-center">
+                                                            <div class="image-wrap">
+                                                                <img src="static/images/psychology.jpg" alt="Circle Image" class="rounded-circle img-fluid image">
+                                                                <div class="text">
+                                                                    <br>
+                                                                    <span class="position">Psychology : {{session['psychology']}}</span>
+                                                                </div>
+                                                            </div>
+                                                        </div><div class="col-md-4 text-center">
+                                                            <div class="image-wrap">
+                                                                <img src="static/images/politics.jpg" alt="Circle Image" class="rounded-circle img-fluid image">
+                                                                <div class="text">
+                                                                    <br>
+                                                                    <span class="position">Politics : {{session['politics']}}</span>
+                                                                </div>
+                                                            </div>
+                                                        </div><div class="col-md-4 text-center">
+                                                            <div class="image-wrap">
+                                                                <img src="static/images/reading.jpg" alt="Circle Image" class="rounded-circle img-fluid image">
+                                                                <div class="text">
+                                                                    <br>
+                                                                    <span class="position">Reading : {{session['reading']}}</span>
+                                                                </div>
+                                                            </div>
+                                                        </div><div class="col-md-4 text-center">
+                                                            <div class="image-wrap">
+                                                                <img src="static/images/languages.jpg" alt="Circle Image" class="rounded-circle img-fluid image">
+                                                                <div class="text">
+                                                                    <br>
+                                                                    <span class="position">Languages : {{session['languages']}}</span>
+                                                                </div>
+                                                            </div>
+                                                        </div><div class="col-md-4 text-center">
+                                                            <div class="image-wrap">
+                                                                <img src="static/images/music.jpg" alt="Circle Image" class="rounded-circle img-fluid image">
+                                                                <div class="text">
+                                                                    <br>
+                                                                    <span class="position">Musical intruments : {{session['musicalins']}}</span>
+                                                                </div>
+                                                            </div>
+                                                        </div><div class="col-md-4 text-center">
+                                                            <div class="image-wrap">
+                                                                <img src="static/images/sport.jpg" alt="Circle Image" class="rounded-circle img-fluid image">
+                                                                <div class="text">
+                                                                    <br>
+                                                                    <span class="position">Sport : {{session['sport']}}</span>
+                                                                </div>
+                                                            </div>
+                                                        </div><div class="col-md-4 text-center">
+                                                            <div class="image-wrap">
+                                                                <img src="static/images/celebrities.jpg" alt="Circle Image" class="rounded-circle img-fluid image">
+                                                                <div class="text">
+                                                                    <br>
+                                                                    <span class="position">Celebrities : {{session['celeb']}}</span>
+                                                                </div>
+                                                            </div>
+                                                        </div><div class="col-md-4 text-center">
+                                                            <div class="image-wrap">
+                                                                <img src="static/images/science.jpg" alt="Circle Image" class="rounded-circle img-fluid image">
+                                                                <div class="text">
+                                                                    <br>
+                                                                    <span class="position">Science and technology : {{session['sci']}}</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12">
+                                                            <form action="/modifyPref">
+                                                            <div class="text-center">
+                                                              <button class="btn btn-primary" type="submit" id="singlebutton" > Modify your preferences, click here!</button>
+                                                            </div>
+                                                            </form>
+                                                          </div>
                                                     </div>
                                         </div>
                                   </section>

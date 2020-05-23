@@ -46,7 +46,7 @@
 
   <!-- - - - - -end- - - - -  -->
   <section class="ftco-section" id="inputs">
-  <form action="" method="POST">
+  <form action="" method="POST" enctype="multipart/form-data">
 		<div class="container">
 			<div class="row mb-5">
 				<div class="col-md-12">
@@ -59,9 +59,18 @@
                 </div>
                 <div class="form-group has-default">
                     <input type="textarea" name="descr" class="form-control" placeholder="Description">
-                </div>
-            </div>
-        </div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<!-- <div class="input-group-prepend">
+				  <span class="input-group-text" id="inputGroupFileAddon01">Upload image</span>
+				</div> -->
+				<div class="custom-file">
+				  <input type="file" class="custom-file-input" name="pdpch" aria-describedby="inputGroupFileAddon01">
+				  <label class="custom-file-label" for="inputGroupFile01"></label>
+				</div>
+			  </div>
+		</div>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4 text-center">
@@ -84,15 +93,6 @@
 					</div>
 					<div class="col-md-4 text-center">
 						<h2 class="heading-section mb-4">
-							<small>Rap</small>
-						</h2>
-						<div class="image-wrap">
-							<input type="checkbox" id="myCheckbox3" value="yes" name="rap"/>
-							<label for="myCheckbox3"><img src="static/images/rap.jpg" alt="Round Image" class="rounded img-fluid image image-2"/></label>
-						</div>
-					</div>
-					<div class="col-md-4 text-center">
-						<h2 class="heading-section mb-4">
 							<small>Reggae</small>
 						</h2>
 						<div class="image-wrap">
@@ -107,15 +107,6 @@
 						<div class="image-wrap">
 							<input type="checkbox" id="myCheckbox5" value="yes" name="swing"/>
 							<label for="myCheckbox5"><img src="static/images/swing.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
-						</div>
-					</div>
-					<div class="col-md-4 text-center">
-						<h2 class="heading-section mb-4">
-							<small>Jazz</small>
-						</h2>
-						<div class="image-wrap">
-							<input type="checkbox" id="myCheckbox6" value="yes" name="jazz"/>
-							<label for="myCheckbox6"><img src="static/images/jazz.jpg" alt="Round Image" class="rounded img-fluid image image-2" /></label>
 						</div>
 					</div>
 					<div class="col-md-4 text-center">

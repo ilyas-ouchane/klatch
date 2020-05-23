@@ -53,35 +53,233 @@
 		<div class="row">
 			<div class="col-md-12">
 				<h2 class="heading-section mb-4 pb-md-3">
-					Chatrooms
+					According to your preferences Klatch suggests
 				</h2>
 			</div>
 		</div>
 		<div class="row">
-			{% for cr in nomsChatrooms %}
-			<div class="col-md-4">
-				<div class="card text-center">
-				  <div class="card-img">
-					  <div class="image-wrap">
-							<img src="static/images/bg_3.jpg" alt="Round Image" class="rounded img-fluid image image-2 image-full">
+				{%if session['cr'] == 1%}
+				<div class="col-md-4">
+					<div class="card text-center">
+					<div class="card-img">
+						<div class="image-wrap">
+								<img src="static/images/1.jpg" alt="Round Image" class="rounded img-fluid image image-2 image-full">
+							</div>
 						</div>
+					<div class="card-body pb-5">
+						<h5 class="card-title mb-0 text-primary">Litterature Addicts</h5>
+						<p class="card-text">Chatroom of all lovers of Reading, Languages and Theater</p>
+							<!-- <span class="badge badge-pill badge-primary p-2 px-3">Reading</span>
+							<span class="badge badge-pill badge-primary p-2 px-3">Languages</span>
+							<span class="badge badge-pill badge-primary p-2 px-3">Theater</span> -->
+						<a href="/chatroom" class="btn btn-primary">Join Chaatroom</a>
 					</div>
-				  <div class="card-body pb-5">
-					<h5 class="card-title mb-0 text-primary">{{cr["nomchatroom"]}}</h5>
-					{% for pr in preferencesChatrooms %}
-						{% for i in preferencesTab %}
-							{% if pr[i] == "yes"%}
-								<span class="position d-block mb-4">{{i}}</span>
-							{% else %}
-							{%endif%}
-						{%endfor%}
-					{%endfor%}
-					<p class="card-text">{{cr["description"]}}</p>
-					<a href="/chatroom" class="btn btn-primary">Join Chaatroom</a>
-				  </div>
+					</div>
 				</div>
+				{%elif session['cr'] == 2 %}
+				<div class="col-md-4">
+					<div class="card text-center">
+					<div class="card-img">
+						<div class="image-wrap">
+								<img src="static/images/2.jpg" alt="Round Image" class="rounded img-fluid image image-2 image-full">
+							</div>
+						</div>
+					<div class="card-body pb-5">
+						<h5 class="card-title mb-0 text-primary">Chatroom of all lovers of comedy </h5>
+						<p class="card-text">Usually cheerful people</p>
+						<!-- {% for pr in preferencesChatrooms %}
+							{% for i in preferencesTab %}
+								{% if pr[i] == "yes"%} -->
+									<!-- <span class="badge badge-pill badge-primary p-2 px-3">Comedy</span> -->
+									<!--<span class="badge badge-pill badge-primary p-2 px-3">Fantazy/Fairy tales</span>
+									<span class="badge badge-pill badge-primary p-2 px-3">Theater</span> -->
+								<!-- {%endif%}
+							{%endfor%}
+						{%endfor%} -->
+						<a href="/chatroom" class="btn btn-primary">Join Chaatroom</a>
+					</div>
+					</div>
+				</div>
+				{%elif session['cr'] == 3 %}
+				<div class="col-md-4">
+					<div class="card text-center">
+					<div class="card-img">
+						<div class="image-wrap">
+								<img src="static/images/3.jpg" alt="Round Image" class="rounded img-fluid image image-2 image-full">
+							</div>
+						</div>
+					<div class="card-body pb-5">
+						<h5 class="card-title mb-0 text-primary">War / Action Lovers</h5>
+						<p class="card-text">Chatroom for the lovers of Action, War and combat</p>
+							<!-- <span class="badge badge-pill badge-primary p-2 px-3">Movies</span>
+							<span class="badge badge-pill badge-primary p-2 px-3">War</span>
+							<span class="badge badge-pill badge-primary p-2 px-3">Western</span> -->
+						<a href="/chatroom" class="btn btn-primary">Join Chaatroom</a>
+					</div>
+					</div>
+				</div>
+				{%elif session['cr'] == 4 %}
+				<div class="col-md-4">
+					<div class="card text-center">
+					<div class="card-img">
+						<div class="image-wrap">
+								<img src="static/images/4.jpg" alt="Round Image" class="rounded img-fluid image image-2 image-full">
+							</div>
+						</div>
+					<div class="card-body pb-5">
+						<h5 class="card-title mb-0 text-primary">The nerdy chatroom </h5>
+						<p class="card-text">For the fans of Sci-fi, science and technology. Usually very introverted. </p>
+							<!-- <span class="badge badge-pill badge-primary p-2 px-3">Sci-fi</span>
+							<span class="badge badge-pill badge-primary p-2 px-3">Documentary</span>
+							<span class="badge badge-pill badge-primary p-2 px-3">Sports</span>
+							<span class="badge badge-pill badge-primary p-2 px-3">Science and technology</span> -->
+						<a href="/chatroom" class="btn btn-primary">Join Chaatroom</a>
+					</div>
+					</div>
+				</div>
+				{%elif session['cr'] == 5 %}
+				<div class="col-md-4">
+					<div class="card text-center">
+					<div class="card-img">
+						<div class="image-wrap">
+								<img src="static/images/5.jpg" alt="Round Image" class="rounded img-fluid image image-2 image-full">
+							</div>
+						</div>
+					<div class="card-body pb-5">
+						<h5 class="card-title mb-0 text-primary">The romance chatroom</h5>
+						<p class="card-text">Romantic and peaceful creatures. Like mostly reading.  </p>
+							<!-- <span class="badge badge-pill badge-primary p-2 px-3">Reading</span>
+							<span class="badge badge-pill badge-primary p-2 px-3">Swing</span>
+							<span class="badge badge-pill badge-primary p-2 px-3">Movies</span>
+							<span class="badge badge-pill badge-primary p-2 px-3">Romantic</span> -->
+						<a href="/chatroom" class="btn btn-primary">Join Chaatroom</a>
+					</div>
+					</div>
+				</div>
+				{%endif%}
+		</div>
+		<!-- {{session['cr']}} -->
+		<div class="row">
+			<div class="col-md-12">
+				<h2 class="heading-section mb-4 pb-md-3">
+					Other Chatrooms
+				</h2>
 			</div>
-			{%endfor%}
+		</div>
+		<div class="row">
+				<div class="col-md-4">
+					<div class="card text-center">
+					<div class="card-img">
+						<div class="image-wrap">
+								<img src="static/images/1.jpeg" alt="Round Image" class="rounded img-fluid image image-2 image-full">
+							</div>
+						</div>
+					<div class="card-body pb-5">
+						<h5 class="card-title mb-0 text-primary">Litterature Addicts</h5>
+						<p class="card-text">Chatroom of all lovers of Reading, Languages and Theater</p>
+							<!-- <span class="badge badge-pill badge-primary p-2 px-3">Reading</span>
+							<span class="badge badge-pill badge-primary p-2 px-3">Languages</span>
+							<span class="badge badge-pill badge-primary p-2 px-3">Theater</span> -->
+						<a href="/chatroom" class="btn btn-primary">Join Chaatroom</a>
+					</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card text-center">
+					<div class="card-img">
+						<div class="image-wrap">
+								<img src="static/images/2.jpg" alt="Round Image" class="rounded img-fluid image image-2 image-full">
+							</div>
+						</div>
+					<div class="card-body pb-5">
+						<h5 class="card-title mb-0 text-primary">Chatroom of all lovers of comedy </h5>
+						<p class="card-text">Usually cheerful people</p>
+						<!-- {% for pr in preferencesChatrooms %}
+							{% for i in preferencesTab %}
+								{% if pr[i] == "yes"%} -->
+									<!-- <span class="badge badge-pill badge-primary p-2 px-3">Comedy</span> -->
+									<!--<span class="badge badge-pill badge-primary p-2 px-3">Fantazy/Fairy tales</span>
+									<span class="badge badge-pill badge-primary p-2 px-3">Theater</span> -->
+								<!-- {%endif%}
+							{%endfor%}
+						{%endfor%} -->
+						<a href="/chatroom" class="btn btn-primary">Join Chaatroom</a>
+					</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card text-center">
+					<div class="card-img">
+						<div class="image-wrap">
+								<img src="static/images/3.jpg" alt="Round Image" class="rounded img-fluid image image-2 image-full">
+							</div>
+						</div>
+					<div class="card-body pb-5">
+						<h5 class="card-title mb-0 text-primary">War / Action Lovers</h5>
+						<p class="card-text">Chatroom for the lovers of Action, War and combat</p>
+							<!-- <span class="badge badge-pill badge-primary p-2 px-3">Movies</span>
+							<span class="badge badge-pill badge-primary p-2 px-3">War</span>
+							<span class="badge badge-pill badge-primary p-2 px-3">Western</span> -->
+						<a href="/chatroom" class="btn btn-primary">Join Chaatroom</a>
+					</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card text-center">
+					<div class="card-img">
+						<div class="image-wrap">
+								<img src="static/images/4.jpg" alt="Round Image" class="rounded img-fluid image image-2 image-full">
+							</div>
+						</div>
+					<div class="card-body pb-5">
+						<h5 class="card-title mb-0 text-primary">The nerdy chatroom </h5>
+						<p class="card-text">For the fans of Sci-fi, science and technology. Usually very introverted. </p>
+							<!-- <span class="badge badge-pill badge-primary p-2 px-3">Sci-fi</span>
+							<span class="badge badge-pill badge-primary p-2 px-3">Documentary</span>
+							<span class="badge badge-pill badge-primary p-2 px-3">Sports</span>
+							<span class="badge badge-pill badge-primary p-2 px-3">Science and technology</span> -->
+						<a href="/chatroom" class="btn btn-primary">Join Chaatroom</a>
+					</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card text-center">
+					<div class="card-img">
+						<div class="image-wrap">
+								<img src="static/images/5.jpg" alt="Round Image" class="rounded img-fluid image image-2 image-full">
+							</div>
+						</div>
+					<div class="card-body pb-5">
+						<h5 class="card-title mb-0 text-primary">The romance chatroom</h5>
+						<p class="card-text">Romantic and peaceful creatures. Like mostly reading.  </p>
+							<!-- <span class="badge badge-pill badge-primary p-2 px-3">Reading</span>
+							<span class="badge badge-pill badge-primary p-2 px-3">Swing</span>
+							<span class="badge badge-pill badge-primary p-2 px-3">Movies</span>
+							<span class="badge badge-pill badge-primary p-2 px-3">Romantic</span> -->
+						<a href="/chatroom" class="btn btn-primary">Join Chaatroom</a>
+					</div>
+					</div>
+				</div>
+				{% for cr in nomsChatrooms %}
+					{% if session['cr'] in range(6,10) %}
+						<div class="col-md-4">
+							<div class="card text-center">
+							<div class="card-img">
+								<div class="image-wrap">
+										<img src="{{url_for('file', filename=session['pdpch'])}}" alt="Round Image" class="rounded img-fluid image image-2 image-full">
+									</div>
+								</div>
+							<div class="card-body pb-5">
+								<h5 class="card-title mb-0 text-primary">{{cr["nomchatroom"]}}</h5>
+								<p class="card-text">{{cr["description"]}}</p>
+								<a href="/chatroom" class="btn btn-primary">Join Chaatroom</a>
+							</div>
+							</div>
+						</div>
+					{%else%}
+					<p>la</p>
+					{%endif%}
+				{%endfor%}
 		</div>
 	</div>
 </section>
